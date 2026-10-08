@@ -1,0 +1,132 @@
+{
+ "experiment": "CGT-EXP-004",
+ "seed": 4,
+ "env": {
+  "python": "3.13.16",
+  "implementation": "CPython",
+  "platform": "Linux-6.18.44-fc-v80-x86_64-with-glibc2.39",
+  "machine": "x86_64"
+ },
+ "rows": [
+  {
+   "family": "repetitive_forest",
+   "n": 64000,
+   "dag_nodes": 163,
+   "dag_edges": 372,
+   "build_ops": 127000,
+   "compression_ratio": 0.0042125984251968505,
+   "access_ops_per_q": 16.312,
+   "access_explicit_ops_per_q": 1,
+   "update_new_rules_mean": 5.24,
+   "update_ops_mean": 28.525,
+   "live_dag_after_updates": [
+    [
+     1,
+     166
+    ],
+    [
+     10,
+     217
+    ],
+    [
+     50,
+     423
+    ],
+    [
+     200,
+     1176
+    ]
+   ]
+  },
+  {
+   "family": "random_forest",
+   "n": 64000,
+   "dag_nodes": 16302,
+   "dag_edges": 39605,
+   "build_ops": 127000,
+   "compression_ratio": 0.44021259842519683,
+   "access_ops_per_q": 16.492,
+   "access_explicit_ops_per_q": 1,
+   "update_new_rules_mean": 5.285,
+   "update_ops_mean": 28.735,
+   "live_dag_after_updates": [
+    [
+     1,
+     16302
+    ],
+    [
+     10,
+     16311
+    ],
+    [
+     50,
+     16366
+    ],
+    [
+     200,
+     16559
+    ]
+   ]
+  },
+  {
+   "family": "full_binary_h15",
+   "n": 65535,
+   "dag_nodes": 16,
+   "dag_edges": 30,
+   "build_ops": 131069,
+   "compression_ratio": 0.0003509601812785632,
+   "access_ops_per_q": 22.031,
+   "access_explicit_ops_per_q": 1,
+   "update_new_rules_mean": 15.1,
+   "update_ops_mean": 51.51,
+   "live_dag_after_updates": [
+    [
+     1,
+     29
+    ],
+    [
+     10,
+     124
+    ],
+    [
+     50,
+     491
+    ],
+    [
+     200,
+     1521
+    ]
+   ]
+  },
+  {
+   "family": "monadic_path",
+   "n": 65536,
+   "dag_nodes": 65536,
+   "dag_edges": 65535,
+   "build_ops": 131071,
+   "compression_ratio": 1.0,
+   "access_ops_per_q": 32710.387,
+   "access_explicit_ops_per_q": 1,
+   "update_new_rules_mean": 32089.385,
+   "update_ops_mean": 64178.77,
+   "live_dag_after_updates": [
+    [
+     1,
+     65536
+    ],
+    [
+     10,
+     65536
+    ],
+    [
+     50,
+     65536
+    ],
+    [
+     200,
+     65536
+    ]
+   ]
+  }
+ ]
+}

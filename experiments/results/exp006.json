@@ -1,0 +1,589 @@
+{
+ "experiment": "CGT-EXP-006",
+ "seed": 6,
+ "cap": 2000000,
+ "env": {
+  "python": "3.13.16",
+  "implementation": "CPython",
+  "platform": "Linux-6.18.44-fc-v80-x86_64-with-glibc2.39",
+  "machine": "x86_64"
+ },
+ "rows": [
+  {
+   "family": "3cnf_r4.26",
+   "k": 8,
+   "median_nodes": 49,
+   "trials": [
+    {
+     "nodes": 49,
+     "max_width": 13,
+     "models": 1
+    },
+    {
+     "nodes": 51,
+     "max_width": 13,
+     "models": 3
+    },
+    {
+     "nodes": 37,
+     "max_width": 10,
+     "models": 0
+    },
+    {
+     "nodes": 40,
+     "max_width": 12,
+     "models": 4
+    },
+    {
+     "nodes": 53,
+     "max_width": 14,
+     "models": 2
+    }
+   ]
+  },
+  {
+   "family": "3cnf_r4.26",
+   "k": 12,
+   "median_nodes": 154,
+   "trials": [
+    {
+     "nodes": 153,
+     "max_width": 29,
+     "models": 0
+    },
+    {
+     "nodes": 172,
+     "max_width": 30,
+     "models": 8
+    },
+    {
+     "nodes": 154,
+     "max_width": 28,
+     "models": 0
+    },
+    {
+     "nodes": 141,
+     "max_width": 27,
+     "models": 1
+    },
+    {
+     "nodes": 304,
+     "max_width": 74,
+     "models": 17
+    }
+   ]
+  },
+  {
+   "family": "3cnf_r4.26",
+   "k": 16,
+   "median_nodes": 1205,
+   "trials": [
+    {
+     "nodes": 1250,
+     "max_width": 279,
+     "models": 28
+    },
+    {
+     "nodes": 1258,
+     "max_width": 294,
+     "models": 0
+    },
+    {
+     "nodes": 683,
+     "max_width": 134,
+     "models": 18
+    },
+    {
+     "nodes": 1205,
+     "max_width": 268,
+     "models": 11
+    },
+    {
+     "nodes": 600,
+     "max_width": 104,
+     "models": 6
+    }
+   ]
+  },
+  {
+   "family": "3cnf_r4.26",
+   "k": 20,
+   "median_nodes": 4349,
+   "trials": [
+    {
+     "nodes": 2545,
+     "max_width": 427,
+     "models": 8
+    },
+    {
+     "nodes": 4349,
+     "max_width": 799,
+     "models": 0
+    },
+    {
+     "nodes": 2867,
+     "max_width": 647,
+     "models": 6
+    },
+    {
+     "nodes": 5337,
+     "max_width": 1268,
+     "models": 1
+    },
+    {
+     "nodes": 4672,
+     "max_width": 779,
+     "models": 3
+    }
+   ]
+  },
+  {
+   "family": "3cnf_r4.26",
+   "k": 24,
+   "median_nodes": 9793,
+   "trials": [
+    {
+     "nodes": 5135,
+     "max_width": 730,
+     "models": 126
+    },
+    {
+     "nodes": 15661,
+     "max_width": 2491,
+     "models": 47
+    },
+    {
+     "nodes": 15590,
+     "max_width": 2408,
+     "models": 29
+    },
+    {
+     "nodes": 6596,
+     "max_width": 1105,
+     "models": 13
+    },
+    {
+     "nodes": 9793,
+     "max_width": 2120,
+     "models": 0
+    }
+   ]
+  },
+  {
+   "family": "3cnf_r4.26",
+   "k": 28,
+   "median_nodes": 43895,
+   "trials": [
+    {
+     "nodes": 51665,
+     "max_width": 9273,
+     "models": 2
+    },
+    {
+     "nodes": 24569,
+     "max_width": 3196,
+     "models": 26
+    },
+    {
+     "nodes": 18420,
+     "max_width": 2808,
+     "models": 0
+    },
+    {
+     "nodes": 65476,
+     "max_width": 11658,
+     "models": 15
+    },
+    {
+     "nodes": 43895,
+     "max_width": 6164,
+     "models": 4
+    }
+   ]
+  },
+  {
+   "family": "3cnf_r2.0",
+   "k": 8,
+   "median_nodes": 58,
+   "trials": [
+    {
+     "nodes": 58,
+     "max_width": 14,
+     "models": 26
+    },
+    {
+     "nodes": 55,
+     "max_width": 14,
+     "models": 53
+    },
+    {
+     "nodes": 58,
+     "max_width": 16,
+     "models": 21
+    },
+    {
+     "nodes": 62,
+     "max_width": 16,
+     "models": 42
+    },
+    {
+     "nodes": 81,
+     "max_width": 26,
+     "models": 27
+    }
+   ]
+  },
+  {
+   "family": "3cnf_r2.0",
+   "k": 12,
+   "median_nodes": 300,
+   "trials": [
+    {
+     "nodes": 246,
+     "max_width": 60,
+     "models": 188
+    },
+    {
+     "nodes": 323,
+     "max_width": 77,
+     "models": 148
+    },
+    {
+     "nodes": 300,
+     "max_width": 70,
+     "models": 213
+    },
+    {
+     "nodes": 244,
+     "max_width": 59,
+     "models": 296
+    },
+    {
+     "nodes": 326,
+     "max_width": 81,
+     "models": 166
+    }
+   ]
+  },
+  {
+   "family": "3cnf_r2.0",
+   "k": 16,
+   "median_nodes": 989,
+   "trials": [
+    {
+     "nodes": 1550,
+     "max_width": 364,
+     "models": 750
+    },
+    {
+     "nodes": 886,
+     "max_width": 150,
+     "models": 1166
+    },
+    {
+     "nodes": 989,
+     "max_width": 185,
+     "models": 1607
+    },
+    {
+     "nodes": 725,
+     "max_width": 152,
+     "models": 1410
+    },
+    {
+     "nodes": 1245,
+     "max_width": 332,
+     "models": 475
+    }
+   ]
+  },
+  {
+   "family": "3cnf_r2.0",
+   "k": 20,
+   "median_nodes": 5290,
+   "trials": [
+    {
+     "nodes": 4482,
+     "max_width": 1045,
+     "models": 7103
+    },
+    {
+     "nodes": 4506,
+     "max_width": 708,
+     "models": 3959
+    },
+    {
+     "nodes": 5290,
+     "max_width": 930,
+     "models": 8687
+    },
+    {
+     "nodes": 5816,
+     "max_width": 1334,
+     "models": 2231
+    },
+    {
+     "nodes": 8488,
+     "max_width": 2030,
+     "models": 4292
+    }
+   ]
+  },
+  {
+   "family": "3cnf_r2.0",
+   "k": 24,
+   "median_nodes": 21102,
+   "trials": [
+    {
+     "nodes": 21102,
+     "max_width": 3491,
+     "models": 20617
+    },
+    {
+     "nodes": 10841,
+     "max_width": 1653,
+     "models": 29370
+    },
+    {
+     "nodes": 22291,
+     "max_width": 3228,
+     "models": 20993
+    },
+    {
+     "nodes": 18235,
+     "max_width": 3084,
+     "models": 17176
+    },
+    {
+     "nodes": 45747,
+     "max_width": 9215,
+     "models": 18593
+    }
+   ]
+  },
+  {
+   "family": "3cnf_r2.0",
+   "k": 28,
+   "median_nodes": 52865,
+   "trials": [
+    {
+     "nodes": 41299,
+     "max_width": 5475,
+     "models": 21599
+    },
+    {
+     "nodes": 70678,
+     "max_width": 12712,
+     "models": 123964
+    },
+    {
+     "nodes": 90392,
+     "max_width": 16048,
+     "models": 103274
+    },
+    {
+     "nodes": 43049,
+     "max_width": 6468,
+     "models": 89688
+    },
+    {
+     "nodes": 52865,
+     "max_width": 8127,
+     "models": 85983
+    }
+   ]
+  },
+  {
+   "family": "2cnf_r1.0",
+   "k": 8,
+   "median_nodes": 27,
+   "trials": [
+    {
+     "nodes": 28,
+     "max_width": 6,
+     "models": 40
+    },
+    {
+     "nodes": 27,
+     "max_width": 6,
+     "models": 27
+    },
+    {
+     "nodes": 38,
+     "max_width": 12,
+     "models": 45
+    },
+    {
+     "nodes": 13,
+     "max_width": 2,
+     "models": 60
+    },
+    {
+     "nodes": 21,
+     "max_width": 3,
+     "models": 44
+    }
+   ]
+  },
+  {
+   "family": "2cnf_r1.0",
+   "k": 12,
+   "median_nodes": 72,
+   "trials": [
+    {
+     "nodes": 57,
+     "max_width": 8,
+     "models": 84
+    },
+    {
+     "nodes": 71,
+     "max_width": 16,
+     "models": 104
+    },
+    {
+     "nodes": 211,
+     "max_width": 60,
+     "models": 180
+    },
+    {
+     "nodes": 74,
+     "max_width": 16,
+     "models": 170
+    },
+    {
+     "nodes": 72,
+     "max_width": 15,
+     "models": 74
+    }
+   ]
+  },
+  {
+   "family": "2cnf_r1.0",
+   "k": 16,
+   "median_nodes": 155,
+   "trials": [
+    {
+     "nodes": 218,
+     "max_width": 64,
+     "models": 108
+    },
+    {
+     "nodes": 94,
+     "max_width": 12,
+     "models": 496
+    },
+    {
+     "nodes": 200,
+     "max_width": 40,
+     "models": 576
+    },
+    {
+     "nodes": 130,
+     "max_width": 16,
+     "models": 360
+    },
+    {
+     "nodes": 155,
+     "max_width": 24,
+     "models": 260
+    }
+   ]
+  },
+  {
+   "family": "2cnf_r1.0",
+   "k": 20,
+   "median_nodes": 381,
+   "trials": [
+    {
+     "nodes": 805,
+     "max_width": 128,
+     "models": 2400
+    },
+    {
+     "nodes": 421,
+     "max_width": 54,
+     "models": 4140
+    },
+    {
+     "nodes": 343,
+     "max_width": 48,
+     "models": 1968
+    },
+    {
+     "nodes": 158,
+     "max_width": 24,
+     "models": 2400
+    },
+    {
+     "nodes": 381,
+     "max_width": 52,
+     "models": 2312
+    }
+   ]
+  },
+  {
+   "family": "2cnf_r1.0",
+   "k": 24,
+   "median_nodes": 947,
+   "trials": [
+    {
+     "nodes": 947,
+     "max_width": 144,
+     "models": 11136
+    },
+    {
+     "nodes": 537,
+     "max_width": 56,
+     "models": 45888
+    },
+    {
+     "nodes": 326,
+     "max_width": 64,
+     "models": 44032
+    },
+    {
+     "nodes": 1286,
+     "max_width": 264,
+     "models": 21728
+    },
+    {
+     "nodes": 1181,
+     "max_width": 129,
+     "models": 11568
+    }
+   ]
+  },
+  {
+   "family": "2cnf_r1.0",
+   "k": 28,
+   "median_nodes": 1326,
+   "trials": [
+    {
+     "nodes": 1136,
+     "max_width": 108,
+     "models": 155136
+    },
+    {
+     "nodes": 1326,
+     "max_width": 120,
+     "models": 11520
+    },
+    {
+     "nodes": 734,
+     "max_width": 67,
+     "models": 66432
+    },
+    {
+     "nodes": 1776,
+     "max_width": 240,
+     "models": 54912
+    },
+    {
+     "nodes": 2531,
+     "max_width": 288,
+     "models": 132288
+    }
+   ]
+  }
+ ]
+}

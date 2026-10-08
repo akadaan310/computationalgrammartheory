@@ -1,0 +1,113 @@
+{
+ "experiment": "CGT-EXP-005",
+ "seed": 5,
+ "n": 1024,
+ "reach_of_adversarial_source": 122,
+ "env": {
+  "python": "3.13.16",
+  "implementation": "CPython",
+  "platform": "Linux-6.18.44-fc-v80-x86_64-with-glibc2.39",
+  "machine": "x86_64"
+ },
+ "rows": [
+  {
+   "workload": "query_only_uniform",
+   "ops": 4000,
+   "costs": {
+    "S1_bfs": 62223,
+    "S2_rebuild": 21641,
+    "S3_incremental": 21641,
+    "S4_memo": 66121
+   },
+   "best": "S2_rebuild"
+  },
+  {
+   "workload": "query_only_repetitive",
+   "ops": 4000,
+   "costs": {
+    "S1_bfs": 30216,
+    "S2_rebuild": 21641,
+    "S3_incremental": 21641,
+    "S4_memo": 4077
+   },
+   "best": "S4_memo"
+  },
+  {
+   "workload": "query_only_adversarial",
+   "ops": 4000,
+   "costs": {
+    "S1_bfs": 1000000,
+    "S2_rebuild": 21641,
+    "S3_incremental": 21641,
+    "S4_memo": 228250
+   },
+   "best": "S2_rebuild"
+  },
+  {
+   "workload": "99q_1ins_uniform",
+   "ops": 4000,
+   "costs": {
+    "S1_bfs": 67192,
+    "S2_rebuild": 869944,
+    "S3_incremental": 75080,
+    "S4_memo": 71145
+   },
+   "best": "S1_bfs"
+  },
+  {
+   "workload": "90q_10ins_uniform",
+   "ops": 4000,
+   "costs": {
+    "S1_bfs": 242024,
+    "S2_rebuild": 6775863,
+    "S3_incremental": 602748,
+    "S4_memo": 245653
+   },
+   "best": "S1_bfs"
+  },
+  {
+   "workload": "90q_10ins_adversarial",
+   "ops": 4000,
+   "costs": {
+    "S1_bfs": 1780567,
+    "S2_rebuild": 7546028,
+    "S3_incremental": 661186,
+    "S4_memo": 1770413
+   },
+   "best": "S3_incremental"
+  },
+  {
+   "workload": "90q_10mixed(50%del)_adversarial",
+   "ops": 4000,
+   "costs": {
+    "S1_bfs": 660797,
+    "S2_rebuild": 6400929,
+    "S3_incremental": 3573555,
+    "S4_memo": 658531
+   },
+   "best": "S4_memo"
+  },
+  {
+   "workload": "50q_50mixed(50%del)_uniform",
+   "ops": 4000,
+   "costs": {
+    "S1_bfs": 26624,
+    "S2_rebuild": 17535647,
+    "S3_incremental": 12550168,
+    "S4_memo": 28608
+   },
+   "best": "S1_bfs"
+  },
+  {
+   "workload": "90q_10mixed(50%del)_repetitive",
+   "ops": 4000,
+   "costs": {
+    "S1_bfs": 43685,
+    "S2_rebuild": 6623745,
+    "S3_incremental": 3864605,
+    "S4_memo": 27939
+   },
+   "best": "S4_memo"
+  }
+ ]
+}
