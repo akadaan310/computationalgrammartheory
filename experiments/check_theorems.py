@@ -118,5 +118,71 @@ def thm005():
     print("THM-005 ok")
 
 
+def thm004c():
+    """Corrected statement (audit E-001): Jacobi productive rounds are l-1
+    (right-linear) and ceil(log2 l) (doubling), +1 confirming round."""
+    import random
+    from collections import deque
+    from exp007_grammar_shape import jacobi_depth, path_graph
+    from cgt.graphs import gnp, random_dag
+    rng = random.Random(41)
+    graphs = [path_graph(n) for n in (2, 3, 5, 17, 64)]
+    graphs += [gnp(40, 1.5, rng) for _ in range(20)] + [random_dag(40, 2.0, rng) for _ in range(20)]
+    for g in graphs:
+        # l = max over (u,v) in P+ of the shortest *positive-length* u->v path
+        ell = 0
+        for s in range(g.n):
+            dist = {}
+            dq = deque()
+            for v in g.adj[s]:
+                if v not in dist:
+                    dist[v] = 1; dq.append(v)
+            while dq:
+                u = dq.popleft()
+                for v in g.adj[u]:
+                    if v not in dist:
+                        dist[v] = dist[u] + 1; dq.append(v)
+            ell = max([ell] + list(dist.values()))
+        if ell == 0:
+            continue
+        lin, dbl = jacobi_depth(g, False), jacobi_depth(g, True)
+        assert lin == (ell - 1) + 1, (lin, ell)
+        assert dbl == math.ceil(math.log2(ell)) + 1, (dbl, ell)
+    print(f"THM-004(c) ok ({len(graphs)} graphs)")
+
+
+def thm007():
+    """THM-007 (lower bound for compiled moves on arbitrary trees): the
+    domains dom⟦L⟧ over binary trees with n nodes take at least 2^floor(n/2)
+    distinct values (caterpillar family), checked exactly for n <= 11 by
+    enumerating all binary trees (as prefix-closed address sets)."""
+    def trees(n):
+        # all binary trees with n nodes as frozensets of addresses
+        if n == 0:
+            yield frozenset(); return
+        for k in range(n):
+            for lt in trees(k):
+                for rt in trees(n - 1 - k):
+                    yield frozenset({""} | {"0" + a for a in lt} | {"1" + a for a in rt})
+    for n in range(1, 12):
+        doms = set()
+        for t in trees(n):
+            doms.add(frozenset(a for a in t if a + "0" in t))
+        assert len(doms) >= 2 ** (n // 2), (n, len(doms))
+        # caterpillar family alone attains 2^floor(n/2)
+        cat = set()
+        half = n // 2
+        for mask in range(1 << half):
+            leaves = [i for i in range(half) if mask >> i & 1]
+            spine = n - len(leaves)
+            t = {"1" * i for i in range(spine)} | {"1" * i + "0" for i in leaves}
+            assert len(t) == n
+            cat.add(frozenset(a for a in t if a + "0" in t))
+        assert len(cat) == 2 ** half, (n, len(cat))
+    print("THM-007 ok (n <= 11, all binary trees enumerated)")
+
+
 if __name__ == "__main__":
+    thm007()
+    thm004c()
     thm001b(); thm002(); thm003(); thm005()

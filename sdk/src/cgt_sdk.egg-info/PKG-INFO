@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: cgt-sdk
+Version: 0.1.0
+Summary: Computational Grammar Theory SDK: operational grammars, cost accounting, classical algorithms, and a Grammar-as-a-Service reference contract
+Author: Abed Kadaan (research program)
+License: See repository
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown

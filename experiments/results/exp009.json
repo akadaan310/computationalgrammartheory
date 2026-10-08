@@ -1,0 +1,228 @@
+{
+ "experiment": "CGT-EXP-009",
+ "seed": 9,
+ "env": {
+  "python": "3.13.16",
+  "implementation": "CPython",
+  "platform": "Linux-6.18.44-fc-v80-x86_64-with-glibc2.39",
+  "machine": "x86_64"
+ },
+ "convergence": [
+  {
+   "graph": "copying_n300",
+   "n": 300,
+   "m": 1014,
+   "alpha": 0.5,
+   "kstar": 36,
+   "power_iters": 17,
+   "power_err": 6.777160430071483e-12,
+   "power_bound": 2.872401405271119e-11,
+   "gs_sweeps": 24,
+   "gs_err": 2.0643559344585283e-11,
+   "power_edge_ops": 17238,
+   "gs_edge_ops": 24336
+  },
+  {
+   "graph": "copying_n300",
+   "n": 300,
+   "m": 1014,
+   "alpha": 0.85,
+   "kstar": 158,
+   "power_iters": 28,
+   "power_err": 3.5113320671215087e-12,
+   "power_bound": 5.046320754204895e-11,
+   "gs_sweeps": 98,
+   "gs_err": 1.0444098060349849e-11,
+   "power_edge_ops": 28392,
+   "gs_edge_ops": 99372
+  },
+  {
+   "graph": "copying_n300",
+   "n": 300,
+   "m": 1014,
+   "alpha": 0.9,
+   "kstar": 247,
+   "power_iters": 30,
+   "power_err": 3.181772336921518e-12,
+   "power_bound": 7.157511302396947e-11,
+   "gs_sweeps": 151,
+   "gs_err": 6.734869172769775e-12,
+   "power_edge_ops": 30420,
+   "gs_edge_ops": 153114
+  },
+  {
+   "graph": "copying_n300",
+   "n": 300,
+   "m": 1014,
+   "alpha": 0.95,
+   "kstar": 521,
+   "power_iters": 33,
+   "power_err": 1.5133558468882757e-12,
+   "power_bound": 6.521491571591369e-11,
+   "gs_sweeps": 307,
+   "gs_err": 4.005947266613741e-12,
+   "power_edge_ops": 33462,
+   "gs_edge_ops": 311298
+  },
+  {
+   "graph": "copying_n300",
+   "n": 300,
+   "m": 1014,
+   "alpha": 0.99,
+   "kstar": 2819,
+   "power_iters": 37,
+   "power_err": 2.8758375889004206e-13,
+   "power_bound": 5.738387304395071e-11,
+   "gs_sweeps": 1561,
+   "gs_err": 8.331352101265121e-13,
+   "power_edge_ops": 37518,
+   "gs_edge_ops": 1582854
+  },
+  {
+   "graph": "block_n300",
+   "n": 300,
+   "m": 1163,
+   "alpha": 0.5,
+   "kstar": 36,
+   "power_iters": 27,
+   "power_err": 5.749161823692672e-11,
+   "power_bound": 6.336457964231657e-11,
+   "gs_sweeps": 16,
+   "gs_err": 1.1774710113182651e-11,
+   "power_edge_ops": 31401,
+   "gs_edge_ops": 18608
+  },
+  {
+   "graph": "block_n300",
+   "n": 300,
+   "m": 1163,
+   "alpha": 0.85,
+   "kstar": 158,
+   "power_iters": 104,
+   "power_err": 7.570901598783625e-11,
+   "power_bound": 9.573396412271053e-11,
+   "gs_sweeps": 56,
+   "gs_err": 1.0608826425846651e-11,
+   "power_edge_ops": 120952,
+   "gs_edge_ops": 65128
+  },
+  {
+   "graph": "block_n300",
+   "n": 300,
+   "m": 1163,
+   "alpha": 0.9,
+   "kstar": 247,
+   "power_iters": 149,
+   "power_err": 6.300492560399468e-11,
+   "power_bound": 8.802697535736233e-11,
+   "gs_sweeps": 85,
+   "gs_err": 1.6280721508356993e-11,
+   "power_edge_ops": 173287,
+   "gs_edge_ops": 98855
+  },
+  {
+   "graph": "block_n300",
+   "n": 300,
+   "m": 1163,
+   "alpha": 0.95,
+   "kstar": 521,
+   "power_iters": 246,
+   "power_err": 5.08983596643562e-11,
+   "power_bound": 9.15429630970326e-11,
+   "gs_sweeps": 170,
+   "gs_err": 1.727038941002311e-11,
+   "power_edge_ops": 286098,
+   "gs_edge_ops": 197710
+  },
+  {
+   "graph": "block_n300",
+   "n": 300,
+   "m": 1163,
+   "alpha": 0.99,
+   "kstar": 2819,
+   "power_iters": 485,
+   "power_err": 1.920211502960201e-11,
+   "power_bound": 9.574002772213048e-11,
+   "gs_sweeps": 856,
+   "gs_err": 6.154221250177002e-12,
+   "power_edge_ops": 564055,
+   "gs_edge_ops": 995528
+  }
+ ],
+ "updates": [
+  {
+   "n": 3000,
+   "insertions": 1,
+   "cold_iters": 38,
+   "warm_iters": 27,
+   "cold_edge_ops": 533634,
+   "warm_edge_ops": 379161,
+   "l1_shift_from_base": 0.003742167105459915
+  },
+  {
+   "n": 3000,
+   "insertions": 10,
+   "cold_iters": 38,
+   "warm_iters": 25,
+   "cold_edge_ops": 533976,
+   "warm_edge_ops": 351300,
+   "l1_shift_from_base": 0.0013965198347927353
+  },
+  {
+   "n": 3000,
+   "insertions": 100,
+   "cold_iters": 37,
+   "warm_iters": 30,
+   "cold_edge_ops": 523254,
+   "warm_edge_ops": 424260,
+   "l1_shift_from_base": 0.018869686742586374
+  },
+  {
+   "n": 3000,
+   "insertions": 1000,
+   "cold_iters": 35,
+   "warm_iters": 31,
+   "cold_edge_ops": 526470,
+   "warm_edge_ops": 466302,
+   "l1_shift_from_base": 0.12446388325036659
+  },
+  {
+   "n": 3000,
+   "insertions": 10000,
+   "cold_iters": 25,
+   "warm_iters": 25,
+   "cold_edge_ops": 600875,
+   "warm_edge_ops": 600875,
+   "l1_shift_from_base": 0.5124772743900833
+  }
+ ],
+ "ordering": [
+  {
+   "n": 2000,
+   "ordering": "DAG natural (in-links from later vertices)",
+   "gs_sweeps": 110,
+   "power_iters": 43
+  },
+  {
+   "n": 2000,
+   "ordering": "DAG reversed (in-links from earlier vertices)",
+   "gs_sweeps": 34,
+   "max_score_diff": 2.5019430971440215e-12
+  },
+  {
+   "n": 2000,
+   "ordering": "block-contiguous",
+   "power_iters": 80,
+   "power_edge_ops": 793760,
+   "gs_sweeps": 64
+  },
+  {
+   "n": 2000,
+   "ordering": "random-permuted",
+   "power_iters": 80,
+   "power_edge_ops": 793760,
+   "gs_sweeps": 60,
+   "max_score_diff": 4.336808689942018e-19
+  }
+ ]
+}

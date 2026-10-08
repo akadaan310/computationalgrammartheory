@@ -104,3 +104,35 @@
 2. **EXP-009: Tree SLPs vs DAGs under updates.** Test whether richer structural grammars keep compression under the THM-005 adversary.
 3. **EXP-010: CFL-constrained reachability (Dyck languages).** The first case where the operational grammar is context-free. Compare the cubic CFL-reachability algorithm with specialized Dyck algorithms.
 4. **EXP-011: Workload-adaptive scheme selection.** Use PROP-005 to switch among S1–S4 online. Measure regret against the hindsight-best strategy.
+
+---
+
+## Session 2 experiments
+
+Run all of them with `sh experiments/run_all.sh`. It sets `PYTHONPATH` to include `sdk/src`, so EXP-008 to EXP-010 use the SDK implementations that `sdk/tests` checks.
+
+## CGT-EXP-008 Compiled move words (`exp008_compiled_words.py`)
+- **Hypothesis.** H-013.
+- **Independent variables.**
+  - Structures: heap-shaped tree with n = 10⁶; random pointer tree with n = 2·10⁴; de Bruijn B(2, 20); hypercube Q₂₀; 1000×1000 grid.
+  - Word length L ∈ {8, 64, 512, 4096}.
+  - Workload: random words, or words generated as walks.
+- **Dependent variables.** Compile operations, compiled operations per application, step-by-step operations per application, fraction of starts where the word is defined, and break-even applications. For pointer trees, the table build cost.
+- **Correctness.** Compiled and step-by-step results are asserted equal on every start.
+- **Result.** OBS-013, OBS-014.
+
+## CGT-EXP-009 PageRank (`exp009_pagerank.py`)
+- **Hypotheses.** H-014 to H-017.
+- **Graphs.** Copying-model graph (acyclic, 10% dangling); host-block graph (cyclic, 90% intra-block links).
+- **Variables.**
+  - α ∈ {0.5, 0.85, 0.9, 0.95, 0.99}, tol = 10⁻¹⁰.
+  - Exact solution by Gaussian elimination, for error measurement.
+  - Insertion batches of 1 to 10⁴ edges, solved warm and cold.
+  - Vertex orderings for power iteration and Gauss–Seidel.
+- **Result.** OBS-015 to OBS-017.
+
+## CGT-EXP-010 Grammar-constrained random surfers (`exp010_constrained_ranking.py`)
+- **Hypotheses.** H-018, H-019.
+- **Setup.** Labelled skewed-popularity graphs with n ∈ {500, 5000} and five languages, from universal to length-bounded.
+- **Validation.** For n = 500, a direct solve of the materialized product chain.
+- **Result.** OBS-018.

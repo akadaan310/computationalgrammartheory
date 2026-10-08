@@ -31,3 +31,19 @@ A closure answers existence in O(1). What is the cheapest additional structure t
 
 ### CGT-OPEN-010 Literature debts
 Verify all **[U]** references in `LITERATURE_REVIEW.md`. In particular: attribution of heap numbering and XOR-LCA, Khoussainov–Nerode details, Lohrey's TSLP-vs-DAG succinctness statement, Yannakakis's CFL-reachability attribution, and attribute-grammar literature.
+
+---
+
+## Session 2 updates
+
+- **CGT-OPEN-002** (arithmetic addressing beyond trees): **partially resolved.** PROP-008 gives dense compilable numerations for de Bruijn graphs, hypercubes and grids. THM-006 does the same for heap-shaped trees. Still open: Cayley graphs of non-abelian groups with efficient word problems; tries over growing alphabets.
+- **CGT-OPEN-003** (compiling move words): **partially resolved** by THM-006, THM-007 and DEF-011.
+
+### CGT-OPEN-011 Is the grammar-constrained surfer (PROP-010) known, and is it useful?
+Search the probabilistic-model-checking, meta-path and personalized-ranking literatures for this exact model. Evaluate it on a corpus with relevance judgments before claiming any retrieval benefit.
+
+### CGT-OPEN-012 Characterize arithmetically compilable classes
+For which classes 𝒦 does a numeration exist with an O(1)-word class 𝓕 closed under composition (DEF-011)? Conjecture: exactly when the move domains and actions are determined by O(1) words of parameters per structure, uniformly in 𝒦. A precise form might use the transition monoid's representation size together with the counting lemma of THM-002/THM-007.
+
+### CGT-OPEN-013 Gauss–Seidel orderings for PageRank
+OBS-016 suggests that sweeping in an order consistent with the link direction (in-neighbours first) helps. Is there a cheap ordering derived from the SCC condensation (a "structural grammar" of the graph) with a provable sweep bound? The literature on ordering for iterative PageRank solvers must be reviewed first; this is likely known.

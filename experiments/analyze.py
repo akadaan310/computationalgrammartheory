@@ -121,6 +121,44 @@ def main():
                    f"{'yes' if r['linear_firings'] == r['linear_predicted'] else 'NO'} | "
                    f"{r['linear_parallel_depth']} | {r['doubling_firings']} | {r['doubling_parallel_depth']} |")
 
+    e = load("exp008.json")
+    out += ["\n## CGT-EXP-008 compiled move words (THM-006) and arbitrary-shape tables (THM-007)\n",
+            "| structure | workload | L | compile ops | compiled ops/application | step-by-step ops/application | defined fraction | break-even applications |",
+            "|---|---|---|---|---|---|---|---|"]
+    for r in e["rows"]:
+        if r["structure"] == "heap_tree":
+            out.append(f"| heap-shaped tree n={r['n']} | {r['workload']} | {r['L']} | {r['compile_ops']} | "
+                       f"{r['compiled_ops_per_q']:.1f} | {r['walk_ops_per_q']:.1f} | {r['defined_frac']:.3f} | {r['break_even_Q']:.1f} |")
+        elif r["structure"].startswith("pointer"):
+            out.append(f"| random pointer tree n={r['n']} | table by simulation | {r['L']} | {r['table_build_ops']} (build) | "
+                       f"1 (lookup; {r['table_space_words']} words) | – | {r['defined_frac']:.3f} | – |")
+        else:
+            out.append(f"| {r['structure']} | random words | {r['L']} | {r['compile_ops']} | {r['compiled_apply_ops']} | "
+                       f"{r['walk_ops_per_q']:.1f} | – | – |")
+
+    e = load("exp009.json")
+    out += ["\n## CGT-EXP-009 PageRank convergence, certification, updates\n",
+            "| graph | α | a-priori bound k* | power iterations | true L1 error | certified bound | Gauss–Seidel sweeps |",
+            "|---|---|---|---|---|---|---|"]
+    for r in e["convergence"]:
+        out.append(f"| {r['graph']} (m={r['m']}) | {r['alpha']} | {r['kstar']} | {r['power_iters']} | "
+                   f"{r['power_err']:.2e} | {r['power_bound']:.2e} | {r['gs_sweeps']} |")
+    out += ["\n| insertions | cold iterations | warm-start iterations | L1 shift of the ranking |", "|---|---|---|---|"]
+    for r in e["updates"]:
+        out.append(f"| {r['insertions']} | {r['cold_iters']} | {r['warm_iters']} | {r['l1_shift_from_base']:.3g} |")
+    out += ["\n| ordering | power iterations | Gauss–Seidel sweeps |", "|---|---|---|"]
+    for r in e["ordering"]:
+        out.append(f"| {r['ordering']} | {r.get('power_iters', '–')} | {r['gs_sweeps']} |")
+
+    e = load("exp010.json")
+    out += ["\n## CGT-EXP-010 grammar-constrained random surfers (PROP-010)\n",
+            "| n | language | \\|Q\\| | product states | ≤ \\|Q\\|n | iterations | edge-op ratio vs PageRank | top-10 overlap | L1 distance |",
+            "|---|---|---|---|---|---|---|---|---|"]
+    for r in e["rows"]:
+        out.append(f"| {r['n']} | `{r['language']}` | {r['Q']} | {r['product_states']} | {r['Q'] * r['n']} | "
+                   f"{r['iterations']} | {r['cost_ratio']:.2f} | {r['top10_overlap_with_pagerank']} | "
+                   f"{r['l1_distance_to_pagerank']:.3f} |")
+
     with open(os.path.join(R, "SUMMARY.md"), "w") as fh:
         fh.write("\n".join(out) + "\n")
     print("\n".join(out))

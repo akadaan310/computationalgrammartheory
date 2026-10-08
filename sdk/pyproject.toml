@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cgt-sdk"
+version = "0.1.0"
+description = "Computational Grammar Theory SDK: operational grammars, cost accounting, classical algorithms, and a Grammar-as-a-Service reference contract"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "See repository" }
+authors = [{ name = "Abed Kadaan (research program)" }]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]

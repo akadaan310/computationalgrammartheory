@@ -43,6 +43,20 @@ That work is treated here as the **historical and conceptual origin** of the que
 | REJ-001 | rejected hypothesis | strong form of **Kadaan's** H-000 | rejected by PROP-006 |
 | REJ-002 | rejected hypothesis | session-1 working assumption | rejected by EXP-001 deep workload |
 
+## Session 2 additions (2026-10-08)
+
+| ID | Category | Origin | Relationship to prior work |
+|---|---|---|---|
+| DEF-011 arithmetically compilable | definition | this investigation | cost-oriented specialization of transition monoids / automatic structures |
+| THM-006 word compilation in heap-shaped trees | theorem | proved here; exhaustively checked | heap numbering classical (Williams 1964); normal form not found in the reviewed literature; **novelty unverified** |
+| THM-007 no compact compilation on arbitrary trees | theorem | proved here | elementary counting |
+| PROP-008 compilable de Bruijn / hypercube / grid moves | proposition | elementary | standard algebra |
+| THM-008, PROP-009 PageRank contraction and iteration bound | theorem / proposition | **standard** | Page et al. 1999; Langville & Meyer 2004 |
+| PROP-010 grammar-constrained surfer | proposition (model) | proposed here | Markov chain × automaton product is standard (model checking); close to meta-path measures (Sun et al. 2011); **novelty unknown** |
+| SDK `cgtsdk` 0.1.0 | engineering result | implemented here | reference implementations of classical algorithms, each cited to its original source |
+| GaaS contract `cgt-gaas/0.1` | engineering design | this investigation | — |
+| OBS-013 … OBS-018, NEG-013 … NEG-016, REJ-003 | empirical / negative | experiments here | — |
+
 ## Priority statement
 
 No claim of historical priority is made for any result in this repository. Most proved statements are elementary and some are probably folklore. The candidate contribution of the program so far is a **framing**: a unified operational-grammar notation, a cost-profile discipline that separates syntax, semantics and execution, and a five-mechanism account of where grammatical advantage comes from. Each piece is supported by precise boundary results and counterexamples. Whether this framing is new and useful has to be settled by a deeper literature review (`OPEN_PROBLEMS.md` OPEN-005, OPEN-010).

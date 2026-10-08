@@ -1,0 +1,183 @@
+{
+ "experiment": "CGT-EXP-008",
+ "seed": 8,
+ "env": {
+  "python": "3.13.16",
+  "implementation": "CPython",
+  "platform": "Linux-6.18.44-fc-v80-x86_64-with-glibc2.39",
+  "machine": "x86_64"
+ },
+ "rows": [
+  {
+   "structure": "heap_tree",
+   "workload": "random_words",
+   "n": 1000000,
+   "L": 8,
+   "Q": 2000,
+   "compile_ops": 32,
+   "compiled_ops_per_q": 5.0,
+   "walk_ops_per_q": 7.732,
+   "defined_frac": 0.058,
+   "break_even_Q": 11.713030746705709
+  },
+  {
+   "structure": "heap_tree",
+   "workload": "random_words",
+   "n": 1000000,
+   "L": 64,
+   "Q": 2000,
+   "compile_ops": 256,
+   "compiled_ops_per_q": 5.0,
+   "walk_ops_per_q": 11.642,
+   "defined_frac": 0.0045,
+   "break_even_Q": 38.542607648298706
+  },
+  {
+   "structure": "heap_tree",
+   "workload": "random_words",
+   "n": 1000000,
+   "L": 512,
+   "Q": 2000,
+   "compile_ops": 2048,
+   "compiled_ops_per_q": 5.0,
+   "walk_ops_per_q": 28.884,
+   "defined_frac": 0.0,
+   "break_even_Q": 85.74778094121588
+  },
+  {
+   "structure": "heap_tree",
+   "workload": "random_words",
+   "n": 1000000,
+   "L": 4096,
+   "Q": 2000,
+   "compile_ops": 16384,
+   "compiled_ops_per_q": 5.0,
+   "walk_ops_per_q": 130.211,
+   "defined_frac": 0.0,
+   "break_even_Q": 130.85112330386306
+  },
+  {
+   "structure": "heap_tree",
+   "workload": "walk_words",
+   "n": 1000000,
+   "L": 8,
+   "Q": 2000,
+   "compile_ops": 32,
+   "compiled_ops_per_q": 5.0,
+   "walk_ops_per_q": 16.0,
+   "defined_frac": 1.0,
+   "break_even_Q": 2.909090909090909
+  },
+  {
+   "structure": "heap_tree",
+   "workload": "walk_words",
+   "n": 1000000,
+   "L": 64,
+   "Q": 2000,
+   "compile_ops": 256,
+   "compiled_ops_per_q": 5.0,
+   "walk_ops_per_q": 117.715,
+   "defined_frac": 0.9065,
+   "break_even_Q": 2.2712150113117153
+  },
+  {
+   "structure": "heap_tree",
+   "workload": "walk_words",
+   "n": 1000000,
+   "L": 512,
+   "Q": 2000,
+   "compile_ops": 2048,
+   "compiled_ops_per_q": 5.0,
+   "walk_ops_per_q": 933.046,
+   "defined_frac": 0.907,
+   "break_even_Q": 2.206787163567323
+  },
+  {
+   "structure": "heap_tree",
+   "workload": "walk_words",
+   "n": 1000000,
+   "L": 4096,
+   "Q": 2000,
+   "compile_ops": 16384,
+   "compiled_ops_per_q": 5.0,
+   "walk_ops_per_q": 7419.776,
+   "defined_frac": 0.905,
+   "break_even_Q": 2.2096419365871607
+  },
+  {
+   "structure": "pointer_tree_random",
+   "n": 20000,
+   "L": 8,
+   "table_build_ops": 135205,
+   "table_space_words": 20000,
+   "lookup_ops_per_q": 1,
+   "defined_frac": 0.7525
+  },
+  {
+   "structure": "pointer_tree_random",
+   "n": 20000,
+   "L": 64,
+   "table_build_ops": 321282,
+   "table_space_words": 20000,
+   "lookup_ops_per_q": 1,
+   "defined_frac": 0.04465
+  },
+  {
+   "structure": "pointer_tree_random",
+   "n": 20000,
+   "L": 512,
+   "table_build_ops": 170158,
+   "table_space_words": 20000,
+   "lookup_ops_per_q": 1,
+   "defined_frac": 0.0012
+  },
+  {
+   "structure": "debruijn_k2_m20",
+   "L": 8,
+   "compile_ops": 8,
+   "density": 1.0,
+   "compiled_apply_ops": 1,
+   "walk_ops_per_q": 8.0
+  },
+  {
+   "structure": "debruijn_k2_m20",
+   "L": 512,
+   "compile_ops": 512,
+   "density": 1.0,
+   "compiled_apply_ops": 1,
+   "walk_ops_per_q": 512.0
+  },
+  {
+   "structure": "hypercube_d20",
+   "L": 8,
+   "compile_ops": 8,
+   "density": 1.0,
+   "compiled_apply_ops": 1,
+   "walk_ops_per_q": 8.0
+  },
+  {
+   "structure": "hypercube_d20",
+   "L": 512,
+   "compile_ops": 512,
+   "density": 1.0,
+   "compiled_apply_ops": 1,
+   "walk_ops_per_q": 512.0
+  },
+  {
+   "structure": "grid_1000x1000",
+   "L": 8,
+   "compile_ops": 8,
+   "density": 1.0,
+   "compiled_apply_ops": 6,
+   "walk_ops_per_q": 7.974
+  },
+  {
+   "structure": "grid_1000x1000",
+   "L": 512,
+   "compile_ops": 512,
+   "density": 1.0,
+   "compiled_apply_ops": 6,
+   "walk_ops_per_q": 485.872
+  }
+ ]
+}

@@ -78,3 +78,31 @@ Status values: **open**, **supported** (evidence agrees and no counterevidence; 
 - **Statement.** Once preprocessing, memory, updates and output are counted, most apparent grammatical advantages either vanish or reduce to known mechanisms.
 - **Evidence.** OBS-002 (workload artifact), OBS-004 (break-even up to 27,000 queries), OBS-008 (access 16–32,710× costlier than explicit arrays), OBS-009.
 - **Status.** **Supported.**
+
+---
+
+## Session 2 hypotheses (2026-10-08)
+
+### CGT-H-013 Compiled move words
+- **Statement.** In arithmetically addressed structures, a move word compiles in O(L) into an O(1) map. On arbitrary pointer shapes no compact compiled form exists.
+- **Test.** EXP-008, plus exhaustive tests.
+- **Status.** **Established** (THM-006, THM-007, PROP-008).
+- **Next question.** OPEN-012: characterize the compilable classes.
+
+### CGT-H-014 PageRank certified convergence
+- **Status.** **Established** (THM-008, PROP-009; standard). EXP-009 confirmed the bounds on every instance.
+
+### CGT-H-015 Gauss–Seidel beats power iteration
+- **Status.** **Rejected as a general claim** (REJ-003). GS wins on the cyclic block graph and loses badly on the acyclic copying graph. The sweep order relative to the link direction decides (OBS-016).
+
+### CGT-H-016 Warm starts help, and the help shrinks with update volume
+- **Status.** **Supported** (OBS-017).
+
+### CGT-H-017 Vertex ordering is a representation effect for power iteration
+- **Status.** **Supported.** Iterations and edge operations were identical under permutation, as they must be: power iteration applies the same linear map. GS is order-sensitive (OBS-016).
+
+### CGT-H-018 Constrained surfer cost and reduction
+- **Status.** **Established** (PROP-010). Measured product sizes are always ≤ |Q|·n.
+
+### CGT-H-019 Constraints change rankings
+- **Status.** **Supported** for the generated graphs (OBS-018). Whether the changes are *useful* for retrieval is untested; that needs relevance judgments (OPEN-011).
