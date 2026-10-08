@@ -10,4 +10,12 @@ This page summarizes what has and has not been verified about this publication. 
 - **Code examples:** every executable example in the book is run by `book/tools/check_examples.py` during verification, and its printed output must match.
 - **Interactive laboratory:** every widget computes its numbers live with `cgt-core.js`, whose functions are tested against fixtures exported from the Python SDK.
 
+## Independent checks {#sec:independent-checks}
+
+Readers' reproductions and proof checks are listed here once the researcher has reviewed them, **whatever their outcome**. To add one, use the [submission form](feedback.html#sec:fb-check).
+
+<div class="checks-list" data-independent-checks><p class="checks-empty">No independent checks have been reviewed yet. Every result marked "proved here" is, so far, checked only by its authors and by computation.</p></div>
+
+## Further reading
+
 Remaining limitations are listed in `PUBLICATION_AUDIT.md` and `PUBLICATION_STATUS.md` in the repository.

@@ -79,6 +79,14 @@
     document.querySelectorAll(".index-table tbody tr").forEach((tr) => { tr.hidden = f !== "all" && tr.dataset.kind !== f; });
   }));
 
+  // ---- optional reader feedback (forms, reviewed independent checks)
+  if (document.querySelector("form[data-feedback], [data-independent-checks]")) {
+    import(new URL(rel + "assets/js/feedback.js", location.href).href).then((fb) => fb.mount(rel)).catch(() => {
+      document.querySelectorAll("form[data-feedback]").forEach((f) => { f.hidden = true; });
+      document.querySelectorAll("[data-feedback-unavailable]").forEach((e) => { e.hidden = false; });
+    });
+  }
+
   // ---- laboratory widgets
   const demos = document.querySelectorAll(".demo[data-demo]");
   if (demos.length) {

@@ -1,6 +1,6 @@
 # Abed Kadaan
 
-<p class="lede">Founding Principal Researcher — Computational Grammar Theory</p>
+<p class="lede">Computational Substrate Scientist and Principal Researcher</p>
 
 Abed Kadaan formulated the research program of Computational Grammar Theory (CGT) and its founding question: whether the grammar of a computational structure — the formal rules saying which operations are admissible, how they compose and what they mean — can become part of the machinery that computes over the structure, rather than remaining a description of it.
 
@@ -29,4 +29,4 @@ Under the name **Abed Kadaan**, the broader research activity — CGT, its publi
 
 ## Engaging with the research
 
-The most useful contributions at this stage are independent checks of the proofs marked "proved here", literature pointers that establish or refute the novelty of a candidate contribution (see the [open problems](ledger/open-problems.html)), and reproductions of the experiments on other machines. Everything needed is in the [public repository](https://github.com/akadaan310/computationalgrammartheory).
+The most useful contributions at this stage are independent checks of the proofs marked "proved here", literature pointers that establish or refute the novelty of a candidate contribution (see the [open problems](ledger/open-problems.html)), and reproductions of the experiments on other machines. Everything needed is in the [repository](https://github.com/akadaan310/computationalgrammartheory).

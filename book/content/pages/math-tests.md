@@ -47,6 +47,12 @@ $$M = \begin{pmatrix} 0 & 0 & 1 & \tfrac{1}{4} \\ \tfrac12 & 0 & 0 & \tfrac14 \\
 
 $$\mathcal{F} \subseteq \{\, f : \N \rightharpoonup \N \,\}, \qquad \Z_N, \;\; \R_{\ge 0}, \;\; \mathcal{K}, \;\; \mathfrak{A}, \qquad \Ppoly, \;\; \NP \subseteq \Ppoly \Rightarrow \PH = \Sigma_2^{\mathsf{p}}$$
 
+## Cases, binomials and accents
+
+$$T(m) = \begin{cases} m + 4\,(2^{\lceil \log_2 m \rceil} - 1) & m \ge 1 \\ 0 & m = 0 \end{cases} \qquad \lvert D \cap \{\mathit{push},\mathit{pop}\}^L \rvert = \binom{L}{\lfloor L/2 \rfloor}$$
+
+$$\hat{x}_k, \quad \tilde{\pi}, \quad \bar{d}, \quad \vec{v}, \quad \dot{x}, \quad x', \quad x'', \qquad \overline{\Lang}, \quad \widehat{G}, \quad \underbrace{a\,a \cdots a}_{k}$$
+
 ## A deliberately long equation (overflow behavior)
 
 $$\sem{w}(x) = \Big(\Big(\Big(\Big(\Big(x \gg k_1\Big) \ll j_1\Big) \mid c_1\Big) \gg k_2\Big) \ll j_2\Big) \mid c_2 \quad\text{whenever}\quad 2^{\max(k_1,k_2)} \le x \le \min\big(T_1, T_2, T_3, T_4, T_5, T_6, T_7, T_8\big) \text{ and every intermediate numeral lies in } [1, n]$$

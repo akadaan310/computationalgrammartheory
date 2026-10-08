@@ -3,7 +3,9 @@
 **Working title:** *Computational Grammar Theory: Structure, Operation, and the Cost of Resolution*
 **Author of the research program:** Abed Kadaan
 
-**Status:** outline only. The book is not written until the exit criteria in `RESEARCH_CHARTER.md` §5 hold. Sections marked ◻ have no supporting results yet. Sections marked ◐ have partial results. Sections marked ● have results in the ledger.
+> **Superseded (session 2).** The book now exists: its structure is `book/content/book.json` (8 parts, 20 chapters, 2 appendices), described in `BOOK_CONTENT_ARCHITECTURE.md`. This file is kept unchanged below as the session-1 planning record.
+
+**Status (session 1):** outline only. The book is not written until the exit criteria in `RESEARCH_CHARTER.md` §5 hold. Sections marked ◻ have no supporting results yet. Sections marked ◐ have partial results. Sections marked ● have results in the ledger.
 
 The session-1 evidence changes the mandate's provisional outline in one main way. The book's spine is now **the mechanism account** (DEF-009): grammar as the explicit vehicle through which five mechanisms of computational advantage act, each with a cost profile and a failure family.
 

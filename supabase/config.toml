@@ -1,0 +1,13 @@
+# Supabase CLI configuration for the optional reader-feedback backend.
+# Hosted project: computational-grammar-theory (ref viyuzjhvjivhdvbrcnwh, us-east-1).
+#   supabase link --project-ref viyuzjhvjivhdvbrcnwh
+#   supabase db push            # apply supabase/migrations to the hosted project
+#   supabase start              # optional local stack (Docker) for development
+project_id = "computational-grammar-theory"
+
+[api]
+schemas = ["public"]
+max_rows = 200
+
+[db]
+major_version = 17

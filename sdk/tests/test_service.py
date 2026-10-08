@@ -23,6 +23,8 @@ class TestContract(unittest.TestCase):
         self.assertEqual((r["status"], r["layer"], r["undefined_at"]), ("undefined", "semantics", 2))
         r = handle(dict(base, expression="fly"))
         self.assertEqual((r["status"], r["layer"]), ("rejected", "syntax"))
+        r = handle({"contract": "cgt-gaas/9", "grammar": {"structure": "array"}, "expression": "len"})
+        self.assertEqual((r["layer"], r["error"]["code"]), ("syntax", "contract_mismatch"))
         r = handle({"grammar": {"structure": "array", "version": "2"}, "expression": "len"})
         self.assertEqual(r["error"]["code"], "version_mismatch")
         r = handle({"grammar": {"structure": "graph", "admissible": "(a b)*"},
@@ -80,6 +82,16 @@ class TestHTTP(unittest.TestCase):
             self.assertEqual(a["provenance"]["result_sha256"], local["provenance"]["result_sha256"])
             bad = Client(url).execute({"grammar": {"structure": "heap"}, "expression": "x"})
             self.assertEqual(bad["status"], "rejected")
+            # bodies over 1 MiB are refused before parsing
+            import urllib.error
+            import urllib.request
+            big = json.dumps({"grammar": {"structure": "array"}, "init": {"values": [0] * 400_000},
+                              "expression": "len"}).encode()
+            with self.assertRaises(urllib.error.HTTPError) as cm:
+                urllib.request.urlopen(urllib.request.Request(url + "/v1/execute", data=big,
+                                                              headers={"Content-Type": "application/json"}))
+            self.assertEqual(cm.exception.code, 413)
+            self.assertEqual(json.loads(cm.exception.read())["error"]["code"], "too_large")
         finally:
             srv.shutdown()
             srv.server_close()

@@ -1,0 +1,6 @@
+{
+  "_comment": "Optional reader-feedback backend (Supabase). These values are PUBLIC by design: the publishable key only allows what the row-level-security policies in supabase/migrations allow (insert-only errata and independent checks; public read of reviewed checks). Override at build time with CGT_SUPABASE_URL and CGT_SUPABASE_PUBLISHABLE_KEY, or disable with CGT_BACKEND=off. Never put a service-role or secret key here.",
+  "provider": "supabase",
+  "url": "https://viyuzjhvjivhdvbrcnwh.supabase.co",
+  "publishableKey": "sb_publishable_EB9Db9RTuM49X7l-WOUQLw_JYRF4vMt"
+}

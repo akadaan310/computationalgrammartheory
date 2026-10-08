@@ -43,7 +43,7 @@ A **stack** supports `push(x)`, `pop`, `top` and `empty`, with last-in-first-out
 Ignore the pushed values and record only the sequence of move names. Starting from an empty stack, which words over $\{\mathit{push}, \mathit{pop}\}$ are *defined* — never pop an empty stack?
 
 ::: proposition {#prop:stack-language title="The defined stack words are not regular" status="standard"}
-Let $D = \{ w \in \{\mathit{push}, \mathit{pop}\}^* : \text{every prefix of } w \text{ has at least as many } \mathit{push} \text{ as } \mathit{pop}\}$. Then $D$ is exactly the set of words defined on the empty stack, $D$ is context-free, and $D$ is not regular. The number of words of length $L$ in $D$ is $\binom{L}{\lfloor L/2 \rfloor}$.
+Let $D \subseteq \{\mathit{push}, \mathit{pop}\}^*$ be the set of words in which every prefix contains at least as many $\mathit{push}$ as $\mathit{pop}$. Then $D$ is exactly the set of words defined on the empty stack, $D$ is context-free, and $D$ is not regular. The number of words of length $L$ in $D$ is $\binom{L}{\lfloor L/2 \rfloor}$.
 :::
 
 ::: proof
