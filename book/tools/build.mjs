@@ -45,6 +45,12 @@ const sdkRef = loadData("sdk_reference.json");
 const gaasCaps = loadData("gaas_capabilities.json");
 const ledgerIds = new Set(loadData("ledger_ids.json") || []);
 
+const LEDGER = [["results", "RESULTS.md", "Results ledger"], ["definitions", "DEFINITIONS.md", "Definitions"], ["hypotheses", "HYPOTHESES.md", "Hypotheses"],
+  ["counterexamples", "COUNTEREXAMPLES.md", "Counterexamples and rejected hypotheses"], ["open-problems", "OPEN_PROBLEMS.md", "Open problems"],
+  ["experiments", "EXPERIMENTS.md", "Experiments"], ["provenance", "PROVENANCE.md", "Provenance"], ["literature", "LITERATURE_REVIEW.md", "Literature review"],
+  ["decisions", "DECISION_LOG.md", "Decision log"], ["charter", "RESEARCH_CHARTER.md", "Research charter"], ["audit", "PUBLICATION_AUDIT.md", "Publication audit"],
+  ["summary", "experiments/results/SUMMARY.md", "Experimental summary (generated)"]];
+
 const ENV = {
   // name: [display name, counter, numbered]
   definition: ["Definition", "thm", true], theorem: ["Theorem", "thm", true],
@@ -296,6 +302,10 @@ function renderCommand({ cmd, arg }, ctx) {
 
 function ledgerUrl(id) {
   const kind = id.split("-")[1];
+  const preferred = { DEF: "definitions", H: "hypotheses", HYP: "hypotheses", NEG: "counterexamples", REJ: "counterexamples",
+    OPEN: "open-problems", EXP: "experiments", D: "decisions" }[kind] || "results";
+  const preferredHas = ledgerRendered?.find((L) => L.slug === preferred)?.ids.has(id);
+  if (!preferredHas && anchorPage.has(id)) return `ledger/${anchorPage.get(id)}.html#${id}`;
   const page = { DEF: "definitions", H: "hypotheses", HYP: "hypotheses", NEG: "counterexamples", REJ: "counterexamples",
     OPEN: "open-problems", EXP: "experiments", D: "decisions" }[kind] || "results";
   return `ledger/${page}.html#${id}`;
@@ -376,6 +386,11 @@ function renderChapter(ch, pass) {
   }
   return { html, ctx };
 }
+
+// ledger pages first: every identifier links to the page where it is actually anchored
+const ledgerRendered = LEDGER.map(([slug, file, title]) => ({ slug, file, title, ...ledgerPage(slug, file, title) }));
+const anchorPage = new Map();
+for (const L of ledgerRendered) for (const id of L.ids) if (!anchorPage.has(id)) anchorPage.set(id, L.slug);
 
 // pass 1: numbering + labels
 for (const ch of chapters) renderChapter(ch, 1);
@@ -531,18 +546,14 @@ function bibliographyBody() {
 }
 
 // ------------------------------------------------------------------ ledger pages (render the canonical ledger markdown)
-const LEDGER = [["results", "RESULTS.md", "Results ledger"], ["definitions", "DEFINITIONS.md", "Definitions"], ["hypotheses", "HYPOTHESES.md", "Hypotheses"],
-  ["counterexamples", "COUNTEREXAMPLES.md", "Counterexamples and rejected hypotheses"], ["open-problems", "OPEN_PROBLEMS.md", "Open problems"],
-  ["experiments", "EXPERIMENTS.md", "Experiments"], ["provenance", "PROVENANCE.md", "Provenance"], ["literature", "LITERATURE_REVIEW.md", "Literature review"],
-  ["decisions", "DECISION_LOG.md", "Decision log"], ["charter", "RESEARCH_CHARTER.md", "Research charter"], ["audit", "PUBLICATION_AUDIT.md", "Publication audit"],
-  ["summary", "experiments/results/SUMMARY.md", "Experimental summary (generated)"]];
+
 
 function ledgerPage(slug, file, title) {
   const md = new MarkdownIt({ html: false, typographer: false });
   let html = md.render(fs.readFileSync(path.join(REPO, file), "utf8"));
   const seen = new Set();
   // anchor every ledger identifier at its first defining occurrence (heading or table row)
-  html = html.replace(/<(h[2-4])>([^<]*?)(CGT-[A-Z]+-\d+[a-z]?)/g, (m, tag, pre, id) => {
+  html = html.replace(/<(h[2-4])>((?:(?!<\/h[2-4]>).)*?)(CGT-[A-Z]+-\d+[a-z]?)/g, (m, tag, pre, id) => {
     if (seen.has(id)) return m; seen.add(id); return `<${tag} id="${id}">${pre}${id}`;
   });
   html = html.replace(/<tr>\n<td>(?:<strong>)?(CGT-[A-Z]+-\d+[a-z]?|E-\d+|B-\d+)/g, (m, id) => {
@@ -621,8 +632,7 @@ write("search.html", page({ title: `Search — ${book.title}`, rel: "", body: `<
 // ledger
 const ledgerIndex = [];
 const allLedgerAnchors = new Set();
-for (const [slug, file, title] of LEDGER) {
-  const { html, ids } = ledgerPage(slug, file, title);
+for (const { slug, file, title, html, ids } of ledgerRendered) {
   ids.forEach((x) => allLedgerAnchors.add(`${slug}#${x}`));
   ids.forEach((x) => searchDocs.push({ t: x, u: `ledger/${slug}.html#${x}`, k: "ledger", c: title }));
   ledgerIndex.push([slug, title, file]);
@@ -639,7 +649,7 @@ for (const L of usedLedger) {
 // print edition (single page) for PDF export
 const printBody = `<section class="print-title"><h1>${esc(book.title)}</h1><p class="subtitle">${esc(book.subtitle)}</p><p class="author">${esc(book.author)}<br>${esc(book.role)}</p><p>${esc(book.edition)}</p><p class="status-note">${esc(book.status)}</p></section>
 <nav class="print-toc"><h2>Contents</h2>${contentsBody("#").replace(/href="#chapters\/([\w-]+)\.html"/g, 'href="#ch-$1"')}</nav>
-${rendered.map(({ ch, html, ctx }) => `<article class="chapter print-chapter" id="ch-${ch.slug}"><header class="chapter-opener"><p class="chapter-number">${ch.appendix ? "Appendix" : "Chapter"} ${ch.number}</p><h1>${ctx.mdInline.renderInline(ch.meta.title)}</h1></header>${html.replace(/href="\.\.\/chapters\/([\w-]+)\.html#/g, 'href="#').replace(/href="\.\.\/chapters\/([\w-]+)\.html"/g, 'href="#ch-$1"')}</article>`).join("\n")}
+${rendered.map(({ ch, html, ctx }) => `<article class="chapter print-chapter" id="ch-${ch.slug}"><header class="chapter-opener"><p class="chapter-number">${ch.appendix ? "Appendix" : "Chapter"} ${ch.number}</p><h1>${ctx.mdInline.renderInline(ch.meta.title)}</h1></header>${html.replace(/href="\.\.\/chapters\/([\w-]+)\.html#/g, 'href="#').replace(/href="\.\.\/chapters\/([\w-]+)\.html"/g, 'href="#ch-$1"').replace(/href="\.\.\//g, 'href="')}</article>`).join("\n")}
 <section class="print-bib"><h1>Bibliography</h1>${bibliographyBody().replace(/^<h1>Bibliography<\/h1>/, "")}</section>`;
 write("print.html", page({ title: `${book.title} — print edition`, rel: "", body: printBody, bodyClass: "print-edition" }));
 

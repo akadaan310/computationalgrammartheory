@@ -1,6 +1,236 @@
 [
- {"term": "computational structure", "short": "A finite set of elements with relations.", "definition": "A finite set of elements together with relations over them, possibly with labels and distinguished elements. Distinct from any representation of it in memory.", "see": "def:structure"},
- {"term": "representation", "short": "A concrete memory layout of a structure.", "definition": "A concrete layout of a structure in memory (cells, pointers, bit strings). Costs belong to representations, not to structures."},
- {"term": "word RAM", "short": "The default machine model of this book.", "definition": "Machine model with $w$-bit words, $w \\ge \\log_2 n$, unit-cost word operations and random access; an operation on a $b$-bit integer costs $\\lceil b/w \\rceil$ steps.", "see": "def:wordram"},
- {"term": "three layers", "aliases": ["syntax, semantics, execution"], "short": "Syntax, semantics and execution, kept separate.", "definition": "The separation of every request into syntax (is it well formed and admissible?), semantics (what does it denote?) and execution (what does it cost?).", "see": "def:three-layers"}
+ {
+  "term": "computational structure",
+  "short": "A finite set of elements together with relations over them, possibly with labels and distinguished elements. Distinct fr",
+  "definition": "A finite set of elements together with relations over them, possibly with labels and distinguished elements. Distinct from any representation of it in memory.",
+  "see": "def:structure"
+ },
+ {
+  "term": "representation",
+  "short": "A concrete layout of a structure in memory (cells, pointers, bit strings). Costs belong to representations, not to struc",
+  "definition": "A concrete layout of a structure in memory (cells, pointers, bit strings). Costs belong to representations, not to structures."
+ },
+ {
+  "term": "word RAM",
+  "short": "Machine model with $w$-bit words, $w \\ge \\log_2 n$, unit-cost word operations and random access",
+  "definition": "Machine model with $w$-bit words, $w \\ge \\log_2 n$, unit-cost word operations and random access; an operation on a $b$-bit integer costs $\\lceil b/w \\rceil$ steps.",
+  "see": "def:wordram"
+ },
+ {
+  "term": "three layers",
+  "short": "The separation of every request into syntax (is it well formed and admissible?), semantics (what does it denote?) and ex",
+  "definition": "The separation of every request into syntax (is it well formed and admissible?), semantics (what does it denote?) and execution (what does it cost?).",
+  "aliases": [
+   "syntax, semantics, execution"
+  ],
+  "see": "def:three-layers"
+ },
+ {
+  "term": "operational grammar",
+  "short": "A tuple $(\\Sigma, \\Str, \\sem{\\cdot}, \\Lang)$ of moves, a structure, relational semantics and an admissibility language.",
+  "definition": "A tuple $(\\Sigma, \\Str, \\sem{\\cdot}, \\Lang)$ of moves, a structure, relational semantics and an admissibility language.",
+  "see": "def:opgrammar"
+ },
+ {
+  "term": "structural grammar",
+  "short": "A grammar whose unique derivation is the structure itself, such as a minimal DAG or a straight-line program.",
+  "definition": "A grammar whose unique derivation is the structure itself, such as a minimal DAG or a straight-line program.",
+  "see": "def:structural"
+ },
+ {
+  "term": "move signature",
+  "short": "The finite set of operations (moves) of a structure, each with an arity.",
+  "definition": "The finite set of operations (moves) of a structure, each with an arity.",
+  "aliases": [
+   "moves"
+  ],
+  "see": "def:opgrammar"
+ },
+ {
+  "term": "admissibility language",
+  "short": "A formal language constraining which move words may be executed",
+  "definition": "A formal language constraining which move words may be executed; it constrains the projection of a word onto the moves it mentions.",
+  "see": "def:opgrammar"
+ },
+ {
+  "term": "relational semantics",
+  "short": "The meaning of a move as a relation between states",
+  "definition": "The meaning of a move as a relation between states; words mean compositions and languages mean unions.",
+  "see": "def:relsem"
+ },
+ {
+  "term": "adequacy",
+  "short": "Agreement of a representation's execution with the reference semantics, including the point at which an expression becom",
+  "definition": "Agreement of a representation's execution with the reference semantics, including the point at which an expression becomes undefined.",
+  "aliases": [
+   "adequate representation"
+  ],
+  "see": "def:adequacy"
+ },
+ {
+  "term": "cost profile",
+  "short": "The tuple $(T_{\\mathrm{build}}, S, T_{\\mathrm{query}}, T_{\\mathrm{update}}, |\\mathrm{out}|)$ of a resolution scheme.",
+  "definition": "The tuple $(T_{\\mathrm{build}}, S, T_{\\mathrm{query}}, T_{\\mathrm{update}}, |\\mathrm{out}|)$ of a resolution scheme.",
+  "see": "def:costprofile"
+ },
+ {
+  "term": "grammatical address",
+  "short": "The shortlex-least move word reaching an element from a root",
+  "definition": "The shortlex-least move word reaching an element from a root; for trees, the root-to-node word over $\\{0,1\\}$.",
+  "aliases": [
+   "address"
+  ],
+  "see": "def:address"
+ },
+ {
+  "term": "numeration",
+  "short": "An injective map from addresses to natural numbers",
+  "definition": "An injective map from addresses to natural numbers; arithmetic if moves act on numerals by cheap arithmetic.",
+  "see": "def:address"
+ },
+ {
+  "term": "density",
+  "short": "The number of elements divided by the size of the range of a numeration",
+  "definition": "The number of elements divided by the size of the range of a numeration; density $1$ means an array of exactly $n$ slots suffices.",
+  "see": "def:address"
+ },
+ {
+  "term": "heap numeration",
+  "short": "$\\nu(w) = \\mathrm{int}(1w)$: left child $2\\nu$, right child $2\\nu+1$, parent $\\lfloor \\nu/2 \\rfloor$.",
+  "definition": "$\\nu(w) = \\mathrm{int}(1w)$: left child $2\\nu$, right child $2\\nu+1$, parent $\\lfloor \\nu/2 \\rfloor$.",
+  "see": "thm:heap-scope"
+ },
+ {
+  "term": "arithmetically compilable",
+  "short": "A structure whose moves act through a composition-closed class of constant-size maps, so that any move word compiles onc",
+  "definition": "A structure whose moves act through a composition-closed class of constant-size maps, so that any move word compiles once and applies in constant time.",
+  "aliases": [
+   "compiled move word"
+  ],
+  "see": "def:compilable"
+ },
+ {
+  "term": "transition monoid",
+  "short": "The set of meanings $\\sem{w}$ of all move words, under composition.",
+  "definition": "The set of meanings $\\sem{w}$ of all move words, under composition."
+ },
+ {
+  "term": "mechanism of advantage",
+  "short": "One of M-ARITH, M-PRE, M-SHARE, M-RESTRICT, M-PRUNE: the reasons a grammatical scheme can beat a conventional one on som",
+  "definition": "One of M-ARITH, M-PRE, M-SHARE, M-RESTRICT, M-PRUNE: the reasons a grammatical scheme can beat a conventional one on some cost component.",
+  "aliases": [
+   "mechanism"
+  ],
+  "see": "def:mechanisms"
+ },
+ {
+  "term": "mechanism thesis",
+  "short": "The conjecture that every asymptotic advantage of a grammatical scheme is attributable to the five mechanisms.",
+  "definition": "The conjecture that every asymptotic advantage of a grammatical scheme is attributable to the five mechanisms.",
+  "see": "conj:mechanism"
+ },
+ {
+  "term": "product construction",
+  "short": "Search on pairs (element, automaton state) to resolve language-constrained queries",
+  "definition": "Search on pairs (element, automaton state) to resolve language-constrained queries; at most $|Q| \\cdot n$ states.",
+  "see": "thm:product"
+ },
+ {
+  "term": "path grammar",
+  "short": "A grammar such as $P \\to E \\mid E\\,P$ whose least model is the transitive closure of a graph.",
+  "definition": "A grammar such as $P \\to E \\mid E\\,P$ whose least model is the transitive closure of a graph.",
+  "see": "thm:grammar-shape"
+ },
+ {
+  "term": "minimal DAG",
+  "short": "The structural grammar of a tree with one node per distinct subtree.",
+  "definition": "The structural grammar of a tree with one node per distinct subtree.",
+  "aliases": [
+   "hash-consing"
+  ],
+  "see": "def:dag"
+ },
+ {
+  "term": "break-even query volume",
+  "short": "The number of queries $Q^* = B/(q_0 - q_1)$ after which an index with build cost $B$ pays for itself.",
+  "definition": "The number of queries $Q^* = B/(q_0 - q_1)$ after which an index with build cost $B$ pays for itself.",
+  "aliases": [
+   "break-even"
+  ],
+  "see": "prop:breakeven"
+ },
+ {
+  "term": "counting lemma",
+  "short": "A scheme answering a family of queries without access to the structure needs at least $\\log_2 N$ bits, where $N$ is the ",
+  "definition": "A scheme answering a family of queries without access to the structure needs at least $\\log_2 N$ bits, where $N$ is the number of distinct answer functions.",
+  "aliases": [
+   "information content"
+  ],
+  "see": "lem:counting"
+ },
+ {
+  "term": "retrieval-only scheme",
+  "short": "A representation from which answers are read without consulting the original structure.",
+  "definition": "A representation from which answers are read without consulting the original structure.",
+  "see": "thm:info"
+ },
+ {
+  "term": "amortized cost",
+  "short": "The average cost per operation over a worst-case sequence of operations",
+  "definition": "The average cost per operation over a worst-case sequence of operations; it does not bound individual operations.",
+  "see": "prop:doubling"
+ },
+ {
+  "term": "PageRank",
+  "short": "The stationary distribution of a damped random surfer with teleportation and a dangling-page convention.",
+  "definition": "The stationary distribution of a damped random surfer with teleportation and a dangling-page convention.",
+  "see": "def:pagerank"
+ },
+ {
+  "term": "damping factor",
+  "short": "The probability $\\alpha$ with which the random surfer follows a link rather than teleporting.",
+  "definition": "The probability $\\alpha$ with which the random surfer follows a link rather than teleporting.",
+  "see": "def:pagerank"
+ },
+ {
+  "term": "dangling page",
+  "short": "A page with no out-links",
+  "definition": "A page with no out-links; its probability mass must be redistributed by a stated convention.",
+  "see": "def:pagerank"
+ },
+ {
+  "term": "power iteration",
+  "short": "Repeated application of the PageRank map",
+  "definition": "Repeated application of the PageRank map; it contracts the $L_1$ error by $\\alpha$ per step.",
+  "see": "thm:contraction"
+ },
+ {
+  "term": "constrained surfer",
+  "short": "A random surfer on the product of a labelled graph with a DFA over labels",
+  "definition": "A random surfer on the product of a labelled graph with a DFA over labels; its vertex marginals are the constrained ranks.",
+  "aliases": [
+   "grammar-constrained random surfer"
+  ],
+  "see": "def:constrained-surfer"
+ },
+ {
+  "term": "GaaS contract",
+  "short": "The request/response contract cgt-gaas/0.1: versioned grammars, layered rejection, counted-cost quotas and provenance ha",
+  "definition": "The request/response contract cgt-gaas/0.1: versioned grammars, layered rejection, counted-cost quotas and provenance hashes.",
+  "aliases": [
+   "Grammar as a Service"
+  ]
+ },
+ {
+  "term": "comparison lower bound",
+  "short": "Every comparison sort needs $\\lceil \\log_2 n! \\rceil$ comparisons on some input.",
+  "definition": "Every comparison sort needs $\\lceil \\log_2 n! \\rceil$ comparisons on some input.",
+  "see": "thm:sort-lb"
+ },
+ {
+  "term": "Dyck prefix language",
+  "short": "The words over push/pop whose prefixes never pop more than they push: the defined stack-operation sequences",
+  "definition": "The words over push/pop whose prefixes never pop more than they push: the defined stack-operation sequences; context-free, not regular.",
+  "see": "prop:stack-language"
+ }
 ]

@@ -129,7 +129,7 @@ An operational grammar generates *operations over* a structure. A second kind of
 A **structural grammar** for a structure $\Str$ is a grammar whose unique derivation (or unique generated object) is $\Str$ or its representation: a minimal DAG of a tree, a straight-line program for a string, a tree straight-line program, a hyperedge-replacement grammar for a graph. Its size is the total length of its productions.
 :::
 
-The two kinds combine: navigating a grammar-compressed tree is an operational grammar whose states are given by a structural grammar (Chapter 5, \ledger{CGT-THM-005}). Grammar-based compression is an established field \cite{charikar2005,lohrey2015,bille2011}; this book uses its objects and does not claim new compression results.
+The two kinds combine: navigating a grammar-compressed tree is an operational grammar whose states are given by a structural grammar (Chapter 5, \ledger{CGT-THM-005}). Grammar-based compression is an established field \cite{charikar2005,lohrey2015,bille2011}; random access into a grammar-compressed string of length $N$ takes $\Oh(\log N)$ time \cite{bille2011}, and lower bounds show that for polynomial-space structures this cannot in general be improved to constant time \cite{verbin2013}. This book uses these objects and does not claim new compression results.
 
 ## Cost profiles {#sec:costprofile}
 

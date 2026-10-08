@@ -134,6 +134,8 @@ avl  height=   10  three searches cost    59 {'compare': 40, 'pointer': 19}
 
 The rotations that make this possible are exactly the operations that part (4) of \ref{thm:heap-scope} shows to be fatal for addresses: every node in a rotated subtree changes its address. Balanced search trees and address-based indexes are therefore in tension. A search tree navigates by *comparison* — its grammar is "go left if smaller" — and does not need stable addresses; an address-based scheme needs stable addresses and cannot afford rotations. The research ledger records this as a counterexample to "address-based indexes are stable" (\ledger{CGT-NEG-003}).
 
+A third family of representations deserves mention: **succinct** trees, which encode the shape of an $n$-node tree in $2n + o(n)$ bits — within lower-order terms of the information-theoretic minimum — while supporting navigation in constant time \cite{jacobson1989}. They achieve for arbitrary shapes what the heap numeration achieves only for complete ones, by storing a small amount of precomputed rank information (M-PRE) next to a compact encoding of the shape.
+
 ## Forests and shared structure {#sec:forests}
 
 A **forest** is a sequence of trees. Forests of syntax trees, XML documents and file systems are often highly repetitive: the same subtree occurs many times. The simplest *structural grammar* of a tree represents each distinct subtree once.
