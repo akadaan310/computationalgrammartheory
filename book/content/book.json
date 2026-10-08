@@ -1,0 +1,28 @@
+{
+  "title": "Computational Grammar Theory",
+  "subtitle": "Structure, Operation, and the Cost of Resolution",
+  "author": "Abed Kadaan",
+  "role": "Founding Principal Researcher — Computational Grammar Theory",
+  "edition": "Working edition 0.1, October 2026",
+  "status": "A research manuscript in progress. Not peer reviewed; proofs marked “proved here” are self-checked and await independent review.",
+  "description": "A rigorous, interactive book on the formal grammars through which computational structures expose, constrain, compose and resolve their operations — and on exactly when such grammars change what computation costs.",
+  "parts": [
+    {"id": "I", "title": "What Is a Computational Structure?", "blurb": "Ordinary data structures, treated from first principles: elements, relations, operations, representations and costs — before any new notation.",
+     "chapters": ["01-structures", "02-arrays", "03-sequences", "04-associative", "05-trees", "06-graphs"]},
+    {"id": "II", "title": "Grammar as a Computational Object", "blurb": "The formal core: operational grammars, three semantic layers, and the admissibility languages that constrain operations.",
+     "chapters": ["07-operational-grammars", "08-admissibility"]},
+    {"id": "III", "title": "Classical Algorithms Reconstructed", "blurb": "Baseline algorithms with proofs, implementations and counted costs, each mapped to its grammar — including the many cases where grammar adds nothing.",
+     "chapters": ["09-search-sort", "10-graph-algorithms", "11-ranges-dp-strings"]},
+    {"id": "IV", "title": "Cost, Information, and the Limits of Grammar", "blurb": "Preprocessing, information lower bounds, compiled operations, and what grammars cannot do to complexity classes.",
+     "chapters": ["12-cost-information", "13-compilation", "14-complexity-limits"]},
+    {"id": "V", "title": "PageRank, Search, and Information Retrieval", "blurb": "A long-form case study: the mathematics of PageRank from first principles, and what a grammatical view does and does not add.",
+     "chapters": ["15-pagerank", "16-pagerank-grammar"]},
+    {"id": "VI", "title": "Modern Computational Systems", "blurb": "Explicit models of computation graphs, retrieval, vector search and agent workflows — and careful limits on what grammar can claim about them.",
+     "chapters": ["17-ai-systems"]},
+    {"id": "VII", "title": "The Laboratory, the SDK, and Grammar as a Service", "blurb": "The executable companion: how to use, extend and serve computational grammars.",
+     "chapters": ["18-sdk", "19-gaas"]},
+    {"id": "VIII", "title": "Conclusions", "blurb": "What has actually been established, what has not, and where the research goes next.",
+     "chapters": ["20-conclusions"]},
+    {"id": "A", "title": "Appendices", "appendix": true, "chapters": ["a-notation", "b-reproducibility"]}
+  ]
+}

@@ -1,0 +1,539 @@
+{
+ "tarjan1981unified": {
+  "label": "Tarjan 1981a",
+  "authors": "R. E. Tarjan",
+  "title": "A unified approach to path problems",
+  "year": "1981",
+  "venue": "Journal of the ACM 28(3):577–593",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "tarjan1981fast": {
+  "label": "Tarjan 1981b",
+  "authors": "R. E. Tarjan",
+  "title": "Fast algorithms for solving path problems",
+  "year": "1981",
+  "venue": "Journal of the ACM 28(3):594–614",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1145/322261.322273"
+ },
+ "mendelzon1995": {
+  "label": "Mendelzon & Wood 1995",
+  "authors": "A. O. Mendelzon, P. T. Wood",
+  "title": "Finding regular simple paths in graph databases",
+  "year": "1995",
+  "venue": "SIAM Journal on Computing 24(6):1235–1258",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "barrett2000": {
+  "label": "Barrett et al. 2000",
+  "authors": "C. Barrett, R. Jacob, M. Marathe",
+  "title": "Formal-language-constrained path problems",
+  "year": "2000",
+  "venue": "SIAM Journal on Computing 30(3):809–837",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1137/S0097539798337716"
+ },
+ "bille2011": {
+  "label": "Bille et al. 2011",
+  "authors": "P. Bille, G. M. Landau, R. Raman, K. Sadakane, S. R. Satti, O. Weimann",
+  "title": "Random access to grammar-compressed strings",
+  "year": "2011",
+  "venue": "Proc. 22nd ACM-SIAM SODA, pp. 373–389",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "url": "https://arxiv.org/abs/1001.1565",
+  "note": "A journal version (SIAM J. Comput.) exists; its volume and pages were not verified."
+ },
+ "verbin2013": {
+  "label": "Verbin & Yu 2013",
+  "authors": "E. Verbin, W. Yu",
+  "title": "Data structure lower bounds on random access to grammar-compressed strings",
+  "year": "2013",
+  "venue": "Proc. CPM 2013 (LNCS)",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "url": "https://arxiv.org/abs/1203.1080",
+  "note": "Venue confirmed via arXiv and citing papers."
+ },
+ "reps1998": {
+  "label": "Reps 1998",
+  "authors": "T. Reps",
+  "title": "Program analysis via graph reachability",
+  "year": "1998",
+  "venue": "Information and Software Technology 40(11–12):701–726",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1016/S0950-5849(98)00093-7"
+ },
+ "yannakakis1990": {
+  "label": "Yannakakis 1990",
+  "authors": "M. Yannakakis",
+  "title": "Graph-theoretic methods in database theory",
+  "year": "1990",
+  "venue": "Proc. 9th ACM PODS, pp. 230–242",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1145/298514.298576"
+ },
+ "kleitman1975": {
+  "label": "Kleitman & Rothschild 1975",
+  "authors": "D. J. Kleitman, B. L. Rothschild",
+  "title": "Asymptotic enumeration of partial orders on a finite set",
+  "year": "1975",
+  "venue": "Transactions of the AMS 205:205–220",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "downey1980": {
+  "label": "Downey et al. 1980",
+  "authors": "P. J. Downey, R. Sethi, R. E. Tarjan",
+  "title": "Variations on the common subexpression problem",
+  "year": "1980",
+  "venue": "Journal of the ACM 27(4):758–771",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "buneman2003": {
+  "label": "Buneman et al. 2003",
+  "authors": "P. Buneman, M. Grohe, C. Koch",
+  "title": "Path queries on compressed XML",
+  "year": "2003",
+  "venue": "Proc. 29th VLDB, pp. 141–152",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1016/B978-012722442-8/50021-5"
+ },
+ "bender2000": {
+  "label": "Bender & Farach-Colton 2000",
+  "authors": "M. A. Bender, M. Farach-Colton",
+  "title": "The LCA problem revisited",
+  "year": "2000",
+  "venue": "Proc. LATIN 2000, LNCS 1776, pp. 88–94",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "lohrey2015": {
+  "label": "Lohrey 2015",
+  "authors": "M. Lohrey",
+  "title": "Grammar-based tree compression",
+  "year": "2015",
+  "venue": "Proc. DLT 2015 (LNCS)",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1007/978-3-319-21500-6_3"
+ },
+ "agrawal1989": {
+  "label": "Agrawal et al. 1989",
+  "authors": "R. Agrawal, A. Borgida, H. V. Jagadish",
+  "title": "Efficient management of transitive relationships in large data and knowledge bases",
+  "year": "1989",
+  "venue": "Proc. ACM SIGMOD 1989, pp. 253–262",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1145/67544.66950"
+ },
+ "cohen2003": {
+  "label": "Cohen et al. 2003",
+  "authors": "E. Cohen, E. Halperin, H. Kaplan, U. Zwick",
+  "title": "Reachability and distance queries via 2-hop labels",
+  "year": "2003",
+  "venue": "SIAM Journal on Computing 32(5):1338–1355",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1137/S0097539702403098"
+ },
+ "italiano1986": {
+  "label": "Italiano 1986",
+  "authors": "G. F. Italiano",
+  "title": "Amortized efficiency of a path retrieval data structure",
+  "year": "1986",
+  "venue": "Theoretical Computer Science 48:273–281",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "charikar2005": {
+  "label": "Charikar et al. 2005",
+  "authors": "M. Charikar, E. Lehman, D. Liu, R. Panigrahy, M. Prabhakaran, A. Sahai, A. Shelat",
+  "title": "The smallest grammar problem",
+  "year": "2005",
+  "venue": "IEEE Transactions on Information Theory 51(7):2554–2576",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1109/TIT.2005.850116"
+ },
+ "darwiche2002": {
+  "label": "Darwiche & Marquis 2002",
+  "authors": "A. Darwiche, P. Marquis",
+  "title": "A knowledge compilation map",
+  "year": "2002",
+  "venue": "Journal of Artificial Intelligence Research 17:229–264",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1613/jair.989"
+ },
+ "aspvall1979": {
+  "label": "Aspvall et al. 1979",
+  "authors": "B. Aspvall, M. F. Plass, R. E. Tarjan",
+  "title": "A linear-time algorithm for testing the truth of certain quantified Boolean formulas",
+  "year": "1979",
+  "venue": "Information Processing Letters 8(3):121–123",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1016/0020-0190(79)90002-4"
+ },
+ "karp1980": {
+  "label": "Karp & Lipton 1980",
+  "authors": "R. M. Karp, R. J. Lipton",
+  "title": "Some connections between nonuniform and uniform complexity classes",
+  "year": "1980",
+  "venue": "Proc. 12th ACM STOC, pp. 302–309",
+  "verification": "secondary-only",
+  "verification_note": "Only secondary sources (reference lists, course notes) were found; check against the original before formal citation.",
+  "note": "The improvement of the collapse to the second level is commonly credited to Sipser (secondary sources)."
+ },
+ "blumensath2000": {
+  "label": "Blumensath & Grädel 2000",
+  "authors": "A. Blumensath, E. Grädel",
+  "title": "Automatic structures",
+  "year": "2000",
+  "venue": "Proc. 15th IEEE LICS, pp. 51–62",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "khoussainov1995": {
+  "label": "Khoussainov & Nerode 1995",
+  "authors": "B. Khoussainov, A. Nerode",
+  "title": "Automatic presentations of structures",
+  "year": "1995",
+  "venue": "Logic and Computational Complexity, LNCS 960",
+  "verification": "unverified",
+  "verification_note": "Not verified.",
+  "note": "Known through citing papers only; pages not confirmed."
+ },
+ "epstein1992": {
+  "label": "Epstein et al. 1992",
+  "authors": "D. B. A. Epstein, J. W. Cannon, D. F. Holt, S. V. F. Levy, M. S. Paterson, W. P. Thurston",
+  "title": "Word Processing in Groups",
+  "year": "1992",
+  "venue": "Jones and Bartlett (later A K Peters)",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "williams1964": {
+  "label": "Williams 1964",
+  "authors": "J. W. J. Williams",
+  "title": "Algorithm 232: Heapsort",
+  "year": "1964",
+  "venue": "Communications of the ACM 7(6):347–348",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "schieber1988": {
+  "label": "Schieber & Vishkin 1988",
+  "authors": "B. Schieber, U. Vishkin",
+  "title": "On finding lowest common ancestors: simplification and parallelization",
+  "year": "1988",
+  "venue": "SIAM Journal on Computing 17(6):1253–1262",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1137/0217079"
+ },
+ "harel1984": {
+  "label": "Harel & Tarjan 1984",
+  "authors": "D. Harel, R. E. Tarjan",
+  "title": "Fast algorithms for finding nearest common ancestors",
+  "year": "1984",
+  "venue": "SIAM Journal on Computing 13(2):338–355",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1137/0213024"
+ },
+ "page1999": {
+  "label": "Page et al. 1999",
+  "authors": "L. Page, S. Brin, R. Motwani, T. Winograd",
+  "title": "The PageRank citation ranking: Bringing order to the Web",
+  "year": "1999",
+  "venue": "Technical Report 1999-66, Stanford InfoLab",
+  "verification": "secondary-only",
+  "verification_note": "Only secondary sources (reference lists, course notes) were found; check against the original before formal citation.",
+  "url": "http://ilpubs.stanford.edu:8090/422/"
+ },
+ "brin1998": {
+  "label": "Brin & Page 1998",
+  "authors": "S. Brin, L. Page",
+  "title": "The anatomy of a large-scale hypertextual Web search engine",
+  "year": "1998",
+  "venue": "Computer Networks and ISDN Systems 30:107–117",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "haveliwala2003": {
+  "label": "Haveliwala & Kamvar 2003",
+  "authors": "T. Haveliwala, S. Kamvar",
+  "title": "The second eigenvalue of the Google matrix",
+  "year": "2003",
+  "venue": "Technical report, Stanford University",
+  "verification": "secondary-only",
+  "verification_note": "Only secondary sources (reference lists, course notes) were found; check against the original before formal citation."
+ },
+ "langville2004": {
+  "label": "Langville & Meyer 2004",
+  "authors": "A. N. Langville, C. D. Meyer",
+  "title": "Deeper inside PageRank",
+  "year": "2004",
+  "venue": "Internet Mathematics 1(3):335–380",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1080/15427951.2004.10129091"
+ },
+ "langville2006": {
+  "label": "Langville & Meyer 2006",
+  "authors": "A. N. Langville, C. D. Meyer",
+  "title": "Google's PageRank and Beyond: The Science of Search Engine Rankings",
+  "year": "2006",
+  "venue": "Princeton University Press (ISBN 978-0-691-12202-1)",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "haveliwala2002": {
+  "label": "Haveliwala 2002",
+  "authors": "T. H. Haveliwala",
+  "title": "Topic-sensitive PageRank",
+  "year": "2002",
+  "venue": "Proc. 11th International World Wide Web Conference (WWW 2002)",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "url": "https://archives.iw3c2.org/www2002/CDROM/refereed/127/"
+ },
+ "kamvar2003": {
+  "label": "Kamvar et al. 2003",
+  "authors": "S. Kamvar, T. Haveliwala, C. Manning, G. Golub",
+  "title": "Exploiting the block structure of the Web for computing PageRank",
+  "year": "2003",
+  "venue": "Technical Report 2003-17, Stanford University",
+  "verification": "secondary-only",
+  "verification_note": "Only secondary sources (reference lists, course notes) were found; check against the original before formal citation."
+ },
+ "bianchini2005": {
+  "label": "Bianchini et al. 2005",
+  "authors": "M. Bianchini, M. Gori, F. Scarselli",
+  "title": "Inside PageRank",
+  "year": "2005",
+  "venue": "ACM Transactions on Internet Technology 5(1):92–128",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1145/1052934.1052938"
+ },
+ "knuth1968": {
+  "label": "Knuth 1968",
+  "authors": "D. E. Knuth",
+  "title": "Semantics of context-free languages",
+  "year": "1968",
+  "venue": "Mathematical Systems Theory 2(2):127–145",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1007/BF01692511"
+ },
+ "fenwick1994": {
+  "label": "Fenwick 1994",
+  "authors": "P. M. Fenwick",
+  "title": "A new data structure for cumulative frequency tables",
+  "year": "1994",
+  "venue": "Software: Practice and Experience 24(3):327–336",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1002/spe.4380240306"
+ },
+ "dijkstra1959": {
+  "label": "Dijkstra 1959",
+  "authors": "E. W. Dijkstra",
+  "title": "A note on two problems in connexion with graphs",
+  "year": "1959",
+  "venue": "Numerische Mathematik 1:269–271",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1007/BF01386390"
+ },
+ "tarjan1972": {
+  "label": "Tarjan 1972",
+  "authors": "R. E. Tarjan",
+  "title": "Depth-first search and linear graph algorithms",
+  "year": "1972",
+  "venue": "SIAM Journal on Computing 1(2):146–160",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1137/0201010"
+ },
+ "kmp1977": {
+  "label": "Knuth et al. 1977",
+  "authors": "D. E. Knuth, J. H. Morris Jr., V. R. Pratt",
+  "title": "Fast pattern matching in strings",
+  "year": "1977",
+  "venue": "SIAM Journal on Computing 6(2):323–350",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1137/0206024"
+ },
+ "tarjan1975": {
+  "label": "Tarjan 1975",
+  "authors": "R. E. Tarjan",
+  "title": "Efficiency of a good but not linear set union algorithm",
+  "year": "1975",
+  "venue": "Journal of the ACM 22(2):215–225",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "kruskal1956": {
+  "label": "Kruskal 1956",
+  "authors": "J. B. Kruskal",
+  "title": "On the shortest spanning subtree of a graph and the traveling salesman problem",
+  "year": "1956",
+  "venue": "Proceedings of the AMS 7:48–50",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1090/S0002-9939-1956-0078686-7"
+ },
+ "bellman1958": {
+  "label": "Bellman 1958",
+  "authors": "R. Bellman",
+  "title": "On a routing problem",
+  "year": "1958",
+  "venue": "Quarterly of Applied Mathematics 16(1):87–90",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "ford1956": {
+  "label": "Ford 1956",
+  "authors": "L. R. Ford Jr.",
+  "title": "Network flow theory",
+  "year": "1956",
+  "venue": "RAND Corporation Paper P-923",
+  "verification": "secondary-only",
+  "verification_note": "Only secondary sources (reference lists, course notes) were found; check against the original before formal citation.",
+  "note": "Its role as an origin of the Bellman–Ford algorithm is commonly stated but was not verified here."
+ },
+ "prim1957": {
+  "label": "Prim 1957",
+  "authors": "R. C. Prim",
+  "title": "Shortest connection networks and some generalizations",
+  "year": "1957",
+  "venue": "Bell System Technical Journal 36(6):1389–1401",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1002/j.1538-7305.1957.tb01515.x"
+ },
+ "hoare1962": {
+  "label": "Hoare 1962",
+  "authors": "C. A. R. Hoare",
+  "title": "Quicksort",
+  "year": "1962",
+  "venue": "The Computer Journal 5(1):10–16",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1093/comjnl/5.1.10",
+  "note": "Sources disagree on the last page (15 or 16)."
+ },
+ "kahn1962": {
+  "label": "Kahn 1962",
+  "authors": "A. B. Kahn",
+  "title": "Topological sorting of large networks",
+  "year": "1962",
+  "venue": "Communications of the ACM 5(11):558–562",
+  "verification": "secondary-only",
+  "verification_note": "Only secondary sources (reference lists, course notes) were found; check against the original before formal citation.",
+  "doi": "10.1145/368996.369025"
+ },
+ "avl1962": {
+  "label": "Adelson-Velsky & Landis 1962",
+  "authors": "G. M. Adelson-Velsky, E. M. Landis",
+  "title": "An algorithm for the organization of information",
+  "year": "1962",
+  "venue": "Doklady Akademii Nauk SSSR (English translation in Soviet Mathematics Doklady)",
+  "verification": "secondary-only",
+  "verification_note": "Only secondary sources (reference lists, course notes) were found; check against the original before formal citation.",
+  "note": "Journal details from general knowledge; not verified."
+ },
+ "clrs2022": {
+  "label": "Cormen et al. 2022",
+  "authors": "T. H. Cormen, C. E. Leiserson, R. L. Rivest, C. Stein",
+  "title": "Introduction to Algorithms, 4th edition",
+  "year": "2022",
+  "venue": "MIT Press (ISBN 978-0-262-04630-5)",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "malkov2020": {
+  "label": "Malkov & Yashunin 2020",
+  "authors": "Yu. A. Malkov, D. A. Yashunin",
+  "title": "Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs",
+  "year": "2020",
+  "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+  "verification": "secondary-only",
+  "verification_note": "Only secondary sources (reference lists, course notes) were found; check against the original before formal citation.",
+  "doi": "10.1109/TPAMI.2018.2889473",
+  "url": "https://arxiv.org/abs/1603.09320",
+  "note": "DOI and arXiv verified; the journal issue year was not confirmed."
+ },
+ "vaswani2017": {
+  "label": "Vaswani et al. 2017",
+  "authors": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, I. Polosukhin",
+  "title": "Attention is all you need",
+  "year": "2017",
+  "venue": "Advances in Neural Information Processing Systems 30, pp. 5998–6008",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "lewis2020": {
+  "label": "Lewis et al. 2020",
+  "authors": "P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. Küttler, M. Lewis, W. Yih, T. Rocktäschel, S. Riedel, D. Kiela",
+  "title": "Retrieval-augmented generation for knowledge-intensive NLP tasks",
+  "year": "2020",
+  "venue": "Advances in Neural Information Processing Systems 33",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "url": "https://arxiv.org/abs/2005.11401",
+  "note": "Page numbers not verified."
+ },
+ "sun2011": {
+  "label": "Sun et al. 2011",
+  "authors": "Y. Sun, J. Han, X. Yan, P. S. Yu, T. Wu",
+  "title": "PathSim: Meta path-based top-k similarity search in heterogeneous information networks",
+  "year": "2011",
+  "venue": "Proceedings of the VLDB Endowment 4(11):992–1003",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "jacobson1989": {
+  "label": "Jacobson 1989",
+  "authors": "G. Jacobson",
+  "title": "Space-efficient static trees and graphs",
+  "year": "1989",
+  "venue": "Proc. 30th IEEE FOCS, pp. 549–554",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read."
+ },
+ "kozen1997": {
+  "label": "Kozen 1997",
+  "authors": "D. Kozen",
+  "title": "Kleene algebra with tests",
+  "year": "1997",
+  "venue": "ACM Transactions on Programming Languages and Systems 19(3):427–443",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "doi": "10.1145/256167.256195"
+ },
+ "baier2008": {
+  "label": "Baier & Katoen 2008",
+  "authors": "C. Baier, J.-P. Katoen",
+  "title": "Principles of Model Checking",
+  "year": "2008",
+  "venue": "MIT Press (ISBN 978-0-262-02649-9)",
+  "verification": "metadata-verified",
+  "verification_note": "Bibliographic metadata checked by web search against publisher/DBLP/institutional records (2026-10-08); full text not read.",
+  "note": "Cited for the general product of Markov chains with automata; the specific section was not located."
+ }
+}

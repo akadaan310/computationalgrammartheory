@@ -1,0 +1,27 @@
+{
+  "name": "cgt-book",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Computational Grammar Theory — the book as a website (research program of Abed Kadaan)",
+  "type": "module",
+  "scripts": {
+    "prebuild": "python3 tools/export_data.py",
+    "build": "node tools/build.mjs",
+    "check": "node tools/build.mjs --check-only",
+    "test": "node --test tests/*.test.mjs",
+    "examples": "python3 tools/check_examples.py",
+    "pdf": "node tools/pdf.mjs",
+    "verify": "npm run build && npm test && npm run examples && node tools/linkcheck.mjs"
+  },
+  "dependencies": {
+    "katex": "0.16.22",
+    "markdown-it": "14.1.0",
+    "markdown-it-container": "4.0.0",
+    "@fontsource/source-serif-4": "5.3.0",
+    "@fontsource/ibm-plex-sans": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0"
+  },
+  "devDependencies": {
+    "playwright-core": "1.56.1"
+  }
+}

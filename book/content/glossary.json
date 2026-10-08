@@ -1,0 +1,6 @@
+[
+ {"term": "computational structure", "short": "A finite set of elements with relations.", "definition": "A finite set of elements together with relations over them, possibly with labels and distinguished elements. Distinct from any representation of it in memory.", "see": "def:structure"},
+ {"term": "representation", "short": "A concrete memory layout of a structure.", "definition": "A concrete layout of a structure in memory (cells, pointers, bit strings). Costs belong to representations, not to structures."},
+ {"term": "word RAM", "short": "The default machine model of this book.", "definition": "Machine model with $w$-bit words, $w \\ge \\log_2 n$, unit-cost word operations and random access; an operation on a $b$-bit integer costs $\\lceil b/w \\rceil$ steps.", "see": "def:wordram"},
+ {"term": "three layers", "aliases": ["syntax, semantics, execution"], "short": "Syntax, semantics and execution, kept separate.", "definition": "The separation of every request into syntax (is it well formed and admissible?), semantics (what does it denote?) and execution (what does it cost?).", "see": "def:three-layers"}
+]
