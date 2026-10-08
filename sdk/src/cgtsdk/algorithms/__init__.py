@@ -1,6 +1,6 @@
 """Classical baselines and grammar-driven algorithms (book Part III)."""
 from .automata import path_grammar_closure, product_reach
-from .basic import (UnionFind, binary_search, edit_distance, heapsort, insertion_sort,
+from .basic import (UnionFind, binary_search, counting_sort, edit_distance, heapsort, insertion_sort,
                     kmp_find_all, knapsack_01, lcs_length, linear_search, merge_sort,
                     naive_find_all, quicksort)
 from .graph import (bellman_ford, bfs, bfs_path, dfs_order, dijkstra, floyd_warshall, kruskal,

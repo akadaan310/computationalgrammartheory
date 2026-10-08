@@ -239,12 +239,13 @@ class BSTStructure(Structure):
             self.apply(Call("insert", (k,)), c)
 
     def abstract(self):
-        out = []
-
-        def walk(t):
-            if t:
-                walk(t.left); out.append(t.key); walk(t.right)
-        walk(self.root)
+        out, st, t = [], [], self.root
+        while st or t is not None:      # iterative in-order (no recursion limit)
+            while t is not None:
+                st.append(t); t = t.left
+            t = st.pop()
+            out.append(t.key)
+            t = t.right
         return tuple(out)
 
     def size_words(self):
@@ -299,41 +300,59 @@ class BSTStructure(Structure):
         r.h = 1 + max(_h(r.left), _h(r.right))
         return r
 
+    def _rebuild_path(self, path, child, cost):
+        """Reattach `child` below the last node of `path` and fix heights /
+        rebalance bottom-up.  path: list of (node, went_left)."""
+        for node, went_left in reversed(path):
+            if went_left:
+                node.left = child
+            else:
+                node.right = child
+            cost.add("write", 1)
+            child = self._fix(node, cost)
+        return child
+
     def _insert(self, t, k, cost):
-        if t is None:
-            cost.add("alloc", 1)
-            self.n += 1
-            return _BNode(k)
-        cost.add("compare", 1)
-        if k == t.key:
-            return t
-        cost.add("compare", 1); cost.add("pointer", 1)
-        if k < t.key:
-            t.left = self._insert(t.left, k, cost)
-        else:
-            t.right = self._insert(t.right, k, cost)
-        return self._fix(t, cost)
+        """Iterative: no recursion depth limit on degenerate (path-shaped) trees."""
+        path, cur = [], t
+        while cur is not None:
+            cost.add("compare", 1)
+            if k == cur.key:
+                return t
+            cost.add("compare", 1); cost.add("pointer", 1)
+            left = k < cur.key
+            path.append((cur, left))
+            cur = cur.left if left else cur.right
+        cost.add("alloc", 1)
+        self.n += 1
+        return self._rebuild_path(path, _BNode(k), cost)
 
     def _delete(self, t, k, cost):
-        if t is None:
+        path, cur = [], t
+        while cur is not None:
+            cost.add("compare", 1)
+            if k == cur.key:
+                break
+            cost.add("compare", 1); cost.add("pointer", 1)
+            left = k < cur.key
+            path.append((cur, left))
+            cur = cur.left if left else cur.right
+        if cur is None:
             raise Inadmissible(f"key {k!r} absent")
-        cost.add("compare", 1)
-        if k == t.key:
-            if t.left is None or t.right is None:
-                self.n -= 1
-                return t.left or t.right
-            m = t.right
-            while m.left:
-                cost.add("pointer", 1); m = m.left
-            t.key = m.key; cost.add("write", 1)
-            t.right = self._delete(t.right, m.key, cost)
-            return self._fix(t, cost)
-        cost.add("compare", 1); cost.add("pointer", 1)
-        if k < t.key:
-            t.left = self._delete(t.left, k, cost)
+        if cur.left is None or cur.right is None:
+            replacement = cur.left or cur.right
         else:
-            t.right = self._delete(t.right, k, cost)
-        return self._fix(t, cost)
+            # replace by the successor: delete the minimum of the right subtree
+            sub, m = [], cur.right
+            while m.left is not None:
+                cost.add("pointer", 1)
+                sub.append((m, True)); m = m.left
+            cur.key = m.key; cost.add("write", 1)
+            right = self._rebuild_path(sub, m.right, cost) if sub else m.right
+            cur.right = right; cost.add("write", 1)
+            replacement = self._fix(cur, cost)
+        self.n -= 1
+        return self._rebuild_path(path, replacement, cost)
 
     def apply(self, c, cost):
         if c.name == "insert":
@@ -362,3 +381,17 @@ class BSTStructure(Structure):
 
     def tree_height(self) -> int:
         return _h(self.root)
+
+    def check_invariants(self) -> bool:
+        """Search-tree order, stored heights, and (for AVL) balance factors."""
+        st, ok = [(self.root, None, None)], True
+        while st:
+            t, lo, hi = st.pop()
+            if t is None:
+                continue
+            ok &= (lo is None or lo < t.key) and (hi is None or t.key < hi)
+            ok &= t.h == 1 + max(_h(t.left), _h(t.right))
+            if self.balance == "avl":
+                ok &= abs(_h(t.left) - _h(t.right)) <= 1
+            st += [(t.left, lo, t.key), (t.right, t.key, hi)]
+        return bool(ok)

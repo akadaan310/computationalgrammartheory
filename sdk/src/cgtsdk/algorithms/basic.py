@@ -144,6 +144,26 @@ def quicksort(a: Sequence[Any], cost: Optional[Cost] = None, seed: int = 0) -> L
     return a
 
 
+def counting_sort(a: Sequence[int], key_range: int, cost: Optional[Cost] = None) -> List[int]:
+    """Stable sort of integers in [0, key_range) with NO comparisons: each key
+    is used as an *address* into a count array (arithmetic addressing).
+    Θ(n + key_range) time and space -- linear when key_range = O(n), useless
+    when the key range is large and sparse (the density condition again)."""
+    cost = cost or null_cost()
+    count = [0] * (key_range + 1)
+    cost.add("alloc", key_range + 1)
+    for x in a:
+        if not (isinstance(x, int) and 0 <= x < key_range):
+            raise ValueError(f"key {x!r} outside [0, {key_range})")
+        count[x + 1] += 1; cost.add("arith", 1); cost.add("write", 1)
+    for i in range(key_range):
+        count[i + 1] += count[i]; cost.add("arith", 1); cost.add("write", 1)
+    out = [None] * len(a)
+    for x in a:
+        out[count[x]] = x; count[x] += 1; cost.add("read", 1); cost.add("write", 2)
+    return out
+
+
 # ----------------------------------------------------------------- union-find
 class UnionFind:
     """Disjoint sets with union by rank and path compression (Tarjan 1975):

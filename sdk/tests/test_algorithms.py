@@ -48,6 +48,14 @@ class TestSearchSort(unittest.TestCase):
             for f in (insertion_sort, merge_sort, heapsort, quicksort):
                 self.assertEqual(f(a), sorted(a), f.__name__)
 
+    def test_counting_sort(self):
+        from cgtsdk.algorithms import counting_sort
+        for _ in range(100):
+            a = [R.randrange(10) for _ in range(R.randrange(30))]
+            c = Cost()
+            self.assertEqual(counting_sort(a, 10, c), sorted(a))
+            self.assertNotIn("compare", c.counts)
+
     def test_sort_compare_counts(self):
         a = list(range(256))
         c = Cost(); insertion_sort(a, c)
